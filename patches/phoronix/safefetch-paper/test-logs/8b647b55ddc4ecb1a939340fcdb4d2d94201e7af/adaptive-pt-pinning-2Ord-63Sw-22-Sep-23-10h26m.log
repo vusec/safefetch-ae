@@ -1,0 +1,143 @@
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 1
+2023-09-22 12:23:14
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.22ms    4.15ms  54.44ms   85.48%
+    Req/Sec     3.55k   473.95     7.52k    70.56%
+  2542159 requests in 1.50m, 280.06GB read
+Requests/sec:  28215.94
+Transfer/sec:      3.11GB
+
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 2
+2023-09-22 12:24:48
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.24ms    4.18ms  98.26ms   85.33%
+    Req/Sec     3.54k   472.08     7.39k    70.69%
+  2537934 requests in 1.50m, 279.60GB read
+Requests/sec:  28171.07
+Transfer/sec:      3.10GB
+
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 3
+2023-09-22 12:26:22
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.40ms    6.15ms 204.75ms   89.75%
+    Req/Sec     3.54k   481.06     7.51k    72.54%
+  2536992 requests in 1.50m, 279.49GB read
+Requests/sec:  28157.83
+Transfer/sec:      3.10GB
+
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 4
+2023-09-22 12:27:57
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.24ms    4.17ms  94.60ms   85.39%
+    Req/Sec     3.55k   467.58     6.09k    71.35%
+  2540759 requests in 1.50m, 279.91GB read
+Requests/sec:  28209.33
+Transfer/sec:      3.11GB
+
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 5
+2023-09-22 12:29:31
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.24ms    4.18ms  66.83ms   85.29%
+    Req/Sec     3.56k   456.67     7.74k    71.46%
+  2546873 requests in 1.50m, 280.58GB read
+Requests/sec:  28269.37
+Transfer/sec:      3.11GB
+
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 6
+2023-09-22 12:31:05
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.25ms    4.20ms  55.08ms   85.38%
+    Req/Sec     3.54k   469.75     7.11k    69.97%
+  2533679 requests in 1.50m, 279.13GB read
+Requests/sec:  28123.85
+Transfer/sec:      3.10GB
+
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 7
+2023-09-22 12:32:39
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.28ms    4.31ms 122.25ms   85.55%
+    Req/Sec     3.54k   471.96     6.11k    70.45%
+  2537445 requests in 1.50m, 279.54GB read
+Requests/sec:  28165.33
+Transfer/sec:      3.10GB
+
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 8
+2023-09-22 12:34:13
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.25ms    4.18ms 102.57ms   85.34%
+    Req/Sec     3.53k   485.75     5.59k    71.23%
+  2531827 requests in 1.50m, 278.92GB read
+Requests/sec:  28110.52
+Transfer/sec:      3.10GB
+
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 9
+2023-09-22 12:35:47
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.25ms    4.19ms  99.71ms   85.32%
+    Req/Sec     3.54k   464.14     6.03k    70.41%
+  2539017 requests in 1.50m, 279.72GB read
+Requests/sec:  28184.07
+Transfer/sec:      3.10GB
+
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 10
+2023-09-22 12:37:21
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.27ms    4.41ms 115.75ms   85.96%
+    Req/Sec     3.55k   477.73     7.76k    71.52%
+  2540438 requests in 1.50m, 279.87GB read
+Requests/sec:  28197.93
+Transfer/sec:      3.11GB
+
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 11
+2023-09-22 12:38:53
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.29ms    4.38ms 199.15ms   85.65%
+    Req/Sec     3.54k   462.74     5.55k    71.66%
+  2534948 requests in 1.50m, 279.27GB read
+Requests/sec:  28134.84
+Transfer/sec:      3.10GB
+

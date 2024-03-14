@@ -1,0 +1,154 @@
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 1
+2024-02-05 15:51:29
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.47ms    1.67ms  72.70ms   92.36%
+    Req/Sec     6.31k   743.00    11.83k    71.65%
+  4525190 requests in 1.50m, 498.48GB read
+  Socket errors: connect 0, read 9913, write 0, timeout 0
+Requests/sec:  50226.68
+Transfer/sec:      5.53GB
+
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 2
+2024-02-05 15:53:04
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.43ms    1.25ms  49.60ms   85.97%
+    Req/Sec     6.32k   742.71    12.05k    72.05%
+  4533216 requests in 1.50m, 499.36GB read
+  Socket errors: connect 0, read 9112, write 0, timeout 0
+Requests/sec:  50319.07
+Transfer/sec:      5.54GB
+
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 3
+2024-02-05 15:54:38
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.42ms    1.12ms  23.18ms   77.62%
+    Req/Sec     6.32k   741.28    12.15k    70.93%
+  4528786 requests in 1.50m, 498.87GB read
+  Socket errors: connect 0, read 9737, write 0, timeout 0
+Requests/sec:  50264.27
+Transfer/sec:      5.54GB
+
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 4
+2024-02-05 15:56:12
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.50ms    2.77ms 128.75ms   97.37%
+    Req/Sec     6.31k   756.50    11.52k    72.69%
+  4522642 requests in 1.50m, 498.20GB read
+  Socket errors: connect 0, read 9073, write 0, timeout 0
+Requests/sec:  50200.64
+Transfer/sec:      5.53GB
+
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 5
+2024-02-05 15:57:46
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.42ms    1.13ms  23.08ms   77.86%
+    Req/Sec     6.33k   739.64    11.16k    70.97%
+  4538573 requests in 1.50m, 499.95GB read
+  Socket errors: connect 0, read 8641, write 0, timeout 0
+Requests/sec:  50374.43
+Transfer/sec:      5.55GB
+
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 6
+2024-02-05 15:59:20
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.42ms    1.14ms  24.04ms   78.62%
+    Req/Sec     6.32k   750.53    14.12k    72.26%
+  4531087 requests in 1.50m, 499.13GB read
+  Socket errors: connect 0, read 9108, write 0, timeout 0
+Requests/sec:  50292.66
+Transfer/sec:      5.54GB
+
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 7
+2024-02-05 16:00:54
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.46ms    1.89ms  89.23ms   94.05%
+    Req/Sec     6.32k   752.70    11.69k    72.48%
+  4531779 requests in 1.50m, 499.20GB read
+  Socket errors: connect 0, read 8546, write 0, timeout 0
+Requests/sec:  50298.31
+Transfer/sec:      5.54GB
+
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 8
+2024-02-05 16:02:28
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.42ms    1.12ms  28.08ms   78.08%
+    Req/Sec     6.32k   745.25    11.53k    71.14%
+  4532003 requests in 1.50m, 499.23GB read
+  Socket errors: connect 0, read 8391, write 0, timeout 0
+Requests/sec:  50300.79
+Transfer/sec:      5.54GB
+
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 9
+2024-02-05 16:04:02
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.49ms    2.17ms  97.89ms   95.40%
+    Req/Sec     6.32k   766.74    11.66k    73.14%
+  4528721 requests in 1.50m, 498.87GB read
+  Socket errors: connect 0, read 9029, write 0, timeout 0
+Requests/sec:  50263.91
+Transfer/sec:      5.54GB
+
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 10
+2024-02-05 16:05:36
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.43ms    1.20ms  45.83ms   82.98%
+    Req/Sec     6.33k   744.98    11.91k    70.94%
+  4537002 requests in 1.50m, 499.78GB read
+  Socket errors: connect 0, read 9428, write 0, timeout 0
+Requests/sec:  50359.42
+Transfer/sec:      5.55GB
+
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 11
+2024-02-05 16:07:08
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.58ms    4.36ms 183.27ms   99.19%
+    Req/Sec     6.31k   750.86    10.73k    72.40%
+  4519709 requests in 1.50m, 497.87GB read
+  Socket errors: connect 0, read 9542, write 0, timeout 0
+Requests/sec:  50163.88
+Transfer/sec:      5.53GB
+

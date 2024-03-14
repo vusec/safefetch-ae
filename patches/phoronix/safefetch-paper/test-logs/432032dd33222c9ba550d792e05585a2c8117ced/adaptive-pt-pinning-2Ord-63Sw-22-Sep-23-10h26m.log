@@ -1,0 +1,154 @@
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 1
+2023-09-22 12:40:44
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.49ms    1.21ms  40.62ms   79.34%
+    Req/Sec     6.21k   695.29    17.69k    72.15%
+  4453151 requests in 1.50m, 490.54GB read
+  Socket errors: connect 0, read 22679, write 0, timeout 0
+Requests/sec:  49427.01
+Transfer/sec:      5.44GB
+
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 2
+2023-09-22 12:42:18
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.48ms    1.18ms  26.02ms   77.87%
+    Req/Sec     6.23k   674.03    13.22k    71.01%
+  4465709 requests in 1.50m, 491.93GB read
+  Socket errors: connect 0, read 9462, write 0, timeout 0
+Requests/sec:  49566.91
+Transfer/sec:      5.46GB
+
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 3
+2023-09-22 12:43:52
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.48ms    1.34ms  54.77ms   87.87%
+    Req/Sec     6.24k   705.53    10.38k    71.78%
+  4473031 requests in 1.50m, 492.73GB read
+  Socket errors: connect 0, read 9049, write 0, timeout 0
+Requests/sec:  49655.57
+Transfer/sec:      5.47GB
+
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 4
+2023-09-22 12:45:26
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.46ms    1.22ms  38.54ms   81.64%
+    Req/Sec     6.25k   758.96    14.60k    71.88%
+  4477787 requests in 1.50m, 493.26GB read
+  Socket errors: connect 0, read 9417, write 0, timeout 0
+Requests/sec:  49706.24
+Transfer/sec:      5.48GB
+
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 5
+2023-09-22 12:47:00
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.46ms    1.19ms  27.60ms   79.34%
+    Req/Sec     6.25k   704.27    10.94k    70.12%
+  4477289 requests in 1.50m, 493.20GB read
+  Socket errors: connect 0, read 9179, write 0, timeout 0
+Requests/sec:  49692.92
+Transfer/sec:      5.47GB
+
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 6
+2023-09-22 12:48:34
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.47ms    1.29ms  42.61ms   84.94%
+    Req/Sec     6.24k   716.02    12.26k    71.37%
+  4476147 requests in 1.50m, 493.08GB read
+  Socket errors: connect 0, read 9313, write 0, timeout 0
+Requests/sec:  49683.02
+Transfer/sec:      5.47GB
+
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 7
+2023-09-22 12:50:08
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.46ms    1.17ms  25.71ms   78.60%
+    Req/Sec     6.24k   726.13    12.41k    71.47%
+  4470661 requests in 1.50m, 492.47GB read
+  Socket errors: connect 0, read 9820, write 0, timeout 0
+Requests/sec:  49620.13
+Transfer/sec:      5.47GB
+
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 8
+2023-09-22 12:51:43
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.46ms    1.21ms  40.55ms   80.89%
+    Req/Sec     6.25k   726.78    11.08k    71.17%
+  4479643 requests in 1.50m, 493.46GB read
+  Socket errors: connect 0, read 9087, write 0, timeout 0
+Requests/sec:  49718.87
+Transfer/sec:      5.48GB
+
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 9
+2023-09-22 12:53:17
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.47ms    1.31ms  54.29ms   86.64%
+    Req/Sec     6.23k   732.98    11.29k    71.54%
+  4469517 requests in 1.50m, 492.35GB read
+  Socket errors: connect 0, read 9839, write 0, timeout 0
+Requests/sec:  49608.65
+Transfer/sec:      5.46GB
+
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 10
+2023-09-22 12:54:51
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.46ms    1.21ms  33.65ms   80.81%
+    Req/Sec     6.25k   725.86    14.71k    71.69%
+  4475754 requests in 1.50m, 493.03GB read
+  Socket errors: connect 0, read 9407, write 0, timeout 0
+Requests/sec:  49678.38
+Transfer/sec:      5.47GB
+
+#####
+adaptive-pt-pinning-2Ord-63Sw-22-Sep-23-10h26m - Run 11
+2023-09-22 12:56:23
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.46ms    1.17ms  24.16ms   78.43%
+    Req/Sec     6.25k   719.50    13.44k    71.63%
+  4479725 requests in 1.50m, 493.47GB read
+  Socket errors: connect 0, read 9549, write 0, timeout 0
+Requests/sec:  49725.76
+Transfer/sec:      5.48GB
+

@@ -1,0 +1,4 @@
+Module                  Size  Used by
+x86_pkg_temp_thermal    20480  0
+intel_pch_thermal      16384  0
+efivarfs               16384  1

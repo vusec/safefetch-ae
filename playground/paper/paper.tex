@@ -1,0 +1,284 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Template for USENIX papers.
+%
+% History:
+%
+% - TEMPLATE for Usenix papers, specifically to meet requirements of
+%   USENIX '05. originally a template for producing IEEE-format
+%   articles using LaTeX. written by Matthew Ward, CS Department,
+%   Worcester Polytechnic Institute. adapted by David Beazley for his
+%   excellent SWIG paper in Proceedings, Tcl 96. turned into a
+%   smartass generic template by De Clarke, with thanks to both the
+%   above pioneers. Use at your own risk. Complaints to /dev/null.
+%   Make it two column with no page numbering, default is 10 point.
+%
+% - Munged by Fred Douglis <douglis@research.att.com> 10/97 to
+%   separate the .sty file from the LaTeX source template, so that
+%   people can more easily include the .sty file into an existing
+%   document. Also changed to more closely follow the style guidelines
+%   as represented by the Word sample file.
+%
+% - Note that since 2010, USENIX does not require endnotes. If you
+%   want foot of page notes, don't include the endnotes package in the
+%   usepackage command, below.
+% - This version uses the latex2e styles, not the very ancient 2.09
+%   stuff.
+%
+% - Updated July 2018: Text block size changed from 6.5" to 7"
+%
+% - Updated Dec 2018 for ATC'19:
+%
+%   * Revised text to pass HotCRP's auto-formatting check, with
+%     hotcrp.settings.submission_form.body_font_size=10pt, and
+%     hotcrp.settings.submission_form.line_height=12pt
+%
+%   * Switched from \endnote-s to \footnote-s to match Usenix's policy.
+%
+%   * \section* => \begin{abstract} ... \end{abstract}
+%
+%   * Make template self-contained in terms of bibtex entires, to allow
+%     this file to be compiled. (And changing refs style to 'plain'.)
+%
+%   * Make template self-contained in terms of figures, to
+%     allow this file to be compiled. 
+%
+%   * Added packages for hyperref, embedding fonts, and improving
+%     appearance.
+%   
+%   * Removed outdated text.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
+\usepackage{usenix2019_v3}
+
+
+%\hypersetup{
+%    pdfborder = {0 0 0}
+%}
+
+% to be able to draw some self-contained figs
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\usepackage{drawstack}
+\usepackage{todonotes}
+\usepackage{verbatim}
+
+% inlined bib file
+\usepackage{filecontents}
+
+% From previous paper template
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{xspace}
+\usepackage{enumerate}
+\let\labelindent\relax
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{subfloat}
+\usepackage{subfigure}
+
+
+\ifdefined\directlua
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[nomath]{lmodern}
+\fi
+
+% Paper defined names
+\newcommand{\techdefault}[0]{\texttt{SafeFetch-default}\xspace}
+\newcommand{\techwhitelist}[0]{\texttt{SafeFetch-whitelist}\xspace}
+\newcommand{\tech}[0]{\texttt{SafeFetch}\xspace}
+\newcommand{\techlong}[0]{SafeFetch\xspace}
+\newcommand{\sanitizercomponent}[0]{\textbf{\texttt{Cache Frontend}}\xspace}
+\newcommand{\cachemanager}[0]{\texttt{\textbf{Cache Backend}}\xspace}
+\newcommand{\xxx}[1]{\textcolor{orange}{\textbf{#1}}} % version 1
+
+% End of defined names
+
+\usepackage{textcomp}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage[normalem]{ulem}
+
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    escapeinside={/*!}{!*/}
+}
+\newcounter{lstannotation}
+\setcounter{lstannotation}{0}
+\renewcommand{\thelstannotation}{\ding{\number\numexpr181+\arabic{lstannotation}}}
+\newcommand{\annotation}[1]{\refstepcounter{lstannotation}\label{#1}\thelstannotation}
+
+
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{backgroundColour},
+    commentstyle=\color{mGreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{mGray},
+    stringstyle=\color{mPurple},
+    basicstyle=\footnotesize\ttfamily,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=1,
+    language=C++
+  }
+
+\let\origthelstnumber\thelstnumber
+\makeatletter
+\newcommand*\Suppressnumber{%
+  \lst@AddToHook{OnNewLine}{%
+    \let\thelstnumber\relax%
+     \advance\c@lstnumber-\@ne\relax%
+    }%
+}
+
+\newcommand*\Reactivatenumber[1]{%
+  \setcounter{lstnumber}{\numexpr#1-1\relax}
+  \lst@AddToHook{OnNewLine}{%
+   \let\thelstnumber\origthelstnumber%
+   \refstepcounter{lstnumber}%
+  }%
+}
+
+
+\makeatother
+
+\makeatletter
+\newcommand{\setword}[2]{%
+  \phantomsection
+  #1\def\@currentlabel{\unexpanded{#1}}\label{#2}%
+}
+\makeatother
+
+\newcommand{\newpar}[1]{\vspace{0.1cm}\noindent\textbf{#1.}\xspace}
+
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+\begin{document}
+%-------------------------------------------------------------------------------
+\onecolumn
+%don't want date printed
+\date{}
+
+% make title bold and 14 pt font (Latex default is non-bold, 16 pt)
+\title{\Large \bf SafeFetch: Practical Double-Fetch Protection\\with Kernel-Fetch Caching}
+
+\section{Performance Artifact}
+In the following subsections you will find results pertaining to the main performance
+evaluation for \tech as follows: LMBEnch syscall overhead (see Section), 
+LMBench bandwidth overheads (see Section), OSBench and Phoronix.
+For each benchmark the artifact will compute the results from the paper (using our 
+collected raw data).
+Additionally, if the evaluator runs the artifact additional tables/graphs showing 
+the results obtained locally on the evaluator's machine are shown alongside the 
+results in the paper.
+For this, the evaluator must at least run the performance evaluation for SafeFetch (default
+configuration on it's machine.
+The evaluator can additionally run the whitelist and/or midas configuration to obtain the 
+respective results on her/his machine.
+\subsection{LMBench syscall performance results}
+\begin{table}[!h]
+  \caption{LMBench latency results (from the main paper).}
+  \begin{center}
+  \resizebox{0.5\columnwidth}{!}{%
+  \input{tables/lmbench_performance_1}
+  %
+  }
+\end{center}
+\label{tab:lmbench-performance-paper}
+\end{table}
+
+\begin{table}[!h]
+  \caption{LMBench latency results (ran locally on the machine).}
+  \begin{center}
+  \resizebox{0.5\columnwidth}{!}{%
+  \input{tables/lmbench_performance_0}
+  %
+  }
+\end{center}
+\label{tab:lmbench-performance-local}
+\end{table}
+
+\newpage
+\subsection{LMBench bandwidth results}
+
+\begin{table}[!h]
+  \caption{LMBench latency results (from the main paper).}
+  \begin{center}
+  \resizebox{0.5\columnwidth}{!}{%
+  \input{tables/lmbench_bandwidth_1}
+  %
+  }
+\end{center}
+\label{tab:lmbench-bandwidth-paper}
+\end{table}
+
+\begin{table}[!h]
+  \caption{LMBench bandwidth results (ran locally on the machine).}
+  \begin{center}
+  \resizebox{0.5\columnwidth}{!}{%
+  \input{tables/lmbench_bandwidth_0}
+  %
+  }
+\end{center}
+\label{tab:lmbench-bandwidth-local}
+\end{table}
+
+\newpage
+\subsection{OSBench performance results}
+\begin{figure*}[!h]
+  \hfill
+  \subfigure[OSBench(paper)]{\includegraphics[width=0.45\columnwidth]{figs/osbench_performance_1.pdf}}
+  \hfill
+  \subfigure[OSBench(local)]{\includegraphics[width=0.45\columnwidth]{figs/osbench_performance_0.pdf}}
+  \hfill
+  \centering
+  \caption{OSBench performance from paper (a) and ran locally on the evaluator's machine (b).}
+  \label{fig:phoronixosbench}
+  \end{figure*}
+\newpage
+
+\subsection{Phoronix performance results}
+\begin{figure*}[!h]
+  \hfill
+  \subfigure[Phoronix(paper)]{\includegraphics[width=0.45\columnwidth]{figs/phoronix_performance_1.pdf}}
+  \hfill
+  \subfigure[Phoronix(local)]{\includegraphics[width=0.45\columnwidth]{figs/phoronix_performance_0.pdf}}
+  \hfill
+  \centering
+  \caption{Phoronix performance from paper (a) and ran locally on the evaluator's machine (b).}
+  \label{fig:phoronixosbench}
+  \end{figure*}
+
+\section{Security Artifact}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%  LocalWords:  endnotes includegraphics fread ptr nobj noindent
+%%  LocalWords:  pdflatex acks

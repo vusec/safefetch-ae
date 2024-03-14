@@ -1,0 +1,5 @@
+# safefetch default build with adaptive search policy and 1-page metadata/data region buffers
+safefetch "-adaptive 4096 4096 2"
+
+
+

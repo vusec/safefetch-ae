@@ -1,0 +1,143 @@
+#####
+baseline-pt-26-Jul-23-23h00m - Run 1
+2023-07-27 01:07:13
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.18ms    4.11ms  50.69ms   85.48%
+    Req/Sec     3.59k   488.06     6.30k    71.51%
+  2568185 requests in 1.50m, 282.93GB read
+Requests/sec:  28506.06
+Transfer/sec:      3.14GB
+
+#####
+baseline-pt-26-Jul-23-23h00m - Run 2
+2023-07-27 01:08:47
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.19ms    4.17ms 149.64ms   85.63%
+    Req/Sec     3.59k   554.03     6.48k    75.25%
+  2571989 requests in 1.50m, 283.35GB read
+Requests/sec:  28551.23
+Transfer/sec:      3.15GB
+
+#####
+baseline-pt-26-Jul-23-23h00m - Run 3
+2023-07-27 01:10:21
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.18ms    4.13ms 112.52ms   85.57%
+    Req/Sec     3.59k   483.39     6.15k    70.50%
+  2574196 requests in 1.50m, 283.59GB read
+Requests/sec:  28571.59
+Transfer/sec:      3.15GB
+
+#####
+baseline-pt-26-Jul-23-23h00m - Run 4
+2023-07-27 01:11:55
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.17ms    4.13ms 177.44ms   85.52%
+    Req/Sec     3.59k   480.65     7.18k    69.93%
+  2571994 requests in 1.50m, 283.35GB read
+Requests/sec:  28550.60
+Transfer/sec:      3.15GB
+
+#####
+baseline-pt-26-Jul-23-23h00m - Run 5
+2023-07-27 01:13:30
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.19ms    4.12ms  73.10ms   85.34%
+    Req/Sec     3.59k   470.08     7.37k    70.10%
+  2572434 requests in 1.50m, 283.40GB read
+Requests/sec:  28555.40
+Transfer/sec:      3.15GB
+
+#####
+baseline-pt-26-Jul-23-23h00m - Run 6
+2023-07-27 01:15:04
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.19ms    4.18ms 123.61ms   85.71%
+    Req/Sec     3.58k   484.99     7.47k    71.08%
+  2566892 requests in 1.50m, 282.79GB read
+Requests/sec:  28492.19
+Transfer/sec:      3.14GB
+
+#####
+baseline-pt-26-Jul-23-23h00m - Run 7
+2023-07-27 01:16:38
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.28ms    4.90ms 135.34ms   87.43%
+    Req/Sec     3.58k   544.27     7.39k    74.84%
+  2563182 requests in 1.50m, 282.38GB read
+Requests/sec:  28456.58
+Transfer/sec:      3.13GB
+
+#####
+baseline-pt-26-Jul-23-23h00m - Run 8
+2023-07-27 01:18:12
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.21ms    4.57ms 453.81ms   86.41%
+    Req/Sec     3.59k   720.89     7.08k    81.18%
+  2567086 requests in 1.50m, 282.81GB read
+Requests/sec:  28500.74
+Transfer/sec:      3.14GB
+
+#####
+baseline-pt-26-Jul-23-23h00m - Run 9
+2023-07-27 01:19:46
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.18ms    4.18ms 123.32ms   85.72%
+    Req/Sec     3.59k   478.17     6.81k    70.16%
+  2574335 requests in 1.50m, 283.61GB read
+Requests/sec:  28577.66
+Transfer/sec:      3.15GB
+
+#####
+baseline-pt-26-Jul-23-23h00m - Run 10
+2023-07-27 01:21:20
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.20ms    4.25ms 159.46ms   85.82%
+    Req/Sec     3.59k   490.78     8.88k    71.97%
+  2570753 requests in 1.50m, 283.21GB read
+Requests/sec:  28535.24
+Transfer/sec:      3.14GB
+
+#####
+baseline-pt-26-Jul-23-23h00m - Run 11
+2023-07-27 01:22:52
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.20ms    4.21ms 129.76ms   85.58%
+    Req/Sec     3.59k   478.83     7.03k    71.40%
+  2573537 requests in 1.50m, 283.52GB read
+Requests/sec:  28568.67
+Transfer/sec:      3.15GB
+

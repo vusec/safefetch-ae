@@ -1,0 +1,77 @@
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 1
+2024-02-05 15:14:32
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2455236.75 , 10.016 , 0.528 , 10.087 , 17.215 , 18.895 , 24.719 
+
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 2
+2024-02-05 15:15:02
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2524405.50 , 9.837 , 0.416 , 9.703 , 17.407 , 18.831 , 20.239 
+
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 3
+2024-02-05 15:15:32
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2472721.25 , 10.030 , 0.504 , 10.303 , 17.455 , 19.151 , 20.655 
+
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 4
+2024-02-05 15:16:06
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2114381.50 , 11.106 , 0.504 , 8.631 , 19.183 , 19.359 , 34.239 
+
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 5
+2024-02-05 15:16:36
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2516781.25 , 9.838 , 0.496 , 9.879 , 17.247 , 18.863 , 21.871 
+
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 6
+2024-02-05 15:17:07
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2366666.00 , 10.219 , 0.392 , 11.711 , 16.911 , 19.103 , 21.087 
+
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 7
+2024-02-05 15:17:37
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2532169.00 , 9.825 , 0.512 , 9.903 , 17.295 , 18.671 , 20.271 
+
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 8
+2024-02-05 15:18:11
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2013404.88 , 11.498 , 0.904 , 14.495 , 16.119 , 16.247 , 19.135 
+
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 9
+2024-02-05 15:18:41
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2510560.75 , 9.907 , 0.448 , 10.183 , 17.167 , 18.783 , 24.111 
+
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 10
+2024-02-05 15:19:11
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2522362.00 , 9.864 , 0.408 , 10.071 , 17.231 , 18.815 , 20.351 
+
+#####
+adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw-05-Feb-24-13h37m - Run 11
+2024-02-05 15:19:39
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2523768.25 , 9.870 , 0.520 , 9.951 , 17.311 , 18.879 , 24.287 
+

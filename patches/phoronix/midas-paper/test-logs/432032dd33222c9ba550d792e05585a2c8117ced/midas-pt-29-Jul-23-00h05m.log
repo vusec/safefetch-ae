@@ -1,0 +1,154 @@
+#####
+midas-pt-29-Jul-23-00h05m - Run 1
+2023-07-29 02:29:58
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.51ms    1.07ms  24.60ms   74.97%
+    Req/Sec     5.44k   767.01    15.18k    72.30%
+  3899373 requests in 1.50m, 429.54GB read
+  Socket errors: connect 0, read 10912, write 0, timeout 0
+Requests/sec:  43282.99
+Transfer/sec:      4.77GB
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 2
+2023-07-29 02:31:33
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.50ms    1.05ms  21.12ms   74.55%
+    Req/Sec     5.46k   752.98    11.44k    71.92%
+  3910330 requests in 1.50m, 430.75GB read
+  Socket errors: connect 0, read 5725, write 0, timeout 0
+Requests/sec:  43409.35
+Transfer/sec:      4.78GB
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 3
+2023-07-29 02:33:07
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.49ms    1.03ms  17.51ms   73.57%
+    Req/Sec     5.46k   762.18    12.09k    72.40%
+  3911295 requests in 1.50m, 430.85GB read
+  Socket errors: connect 0, read 5584, write 0, timeout 0
+Requests/sec:  43435.06
+Transfer/sec:      4.78GB
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 4
+2023-07-29 02:34:41
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.51ms    1.20ms  59.15ms   83.60%
+    Req/Sec     5.45k   770.04    13.44k    72.49%
+  3907194 requests in 1.50m, 430.40GB read
+  Socket errors: connect 0, read 6288, write 0, timeout 0
+Requests/sec:  43390.12
+Transfer/sec:      4.78GB
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 5
+2023-07-29 02:36:15
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.63ms    3.98ms 173.26ms   99.29%
+    Req/Sec     5.45k   769.41    10.37k    72.28%
+  3905408 requests in 1.50m, 430.20GB read
+  Socket errors: connect 0, read 5791, write 0, timeout 0
+Requests/sec:  43360.89
+Transfer/sec:      4.78GB
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 6
+2023-07-29 02:37:49
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.50ms    1.08ms  34.44ms   76.52%
+    Req/Sec     5.46k   784.45    15.86k    72.85%
+  3914542 requests in 1.50m, 431.21GB read
+  Socket errors: connect 0, read 5824, write 0, timeout 0
+Requests/sec:  43447.75
+Transfer/sec:      4.79GB
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 7
+2023-07-29 02:39:23
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.50ms    1.07ms  25.09ms   75.69%
+    Req/Sec     5.45k   757.62    11.08k    71.87%
+  3908745 requests in 1.50m, 430.57GB read
+  Socket errors: connect 0, read 6283, write 0, timeout 0
+Requests/sec:  43397.74
+Transfer/sec:      4.78GB
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 8
+2023-07-29 02:40:57
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.51ms    1.22ms  52.19ms   84.11%
+    Req/Sec     5.45k   746.55    10.26k    71.88%
+  3904138 requests in 1.50m, 430.06GB read
+  Socket errors: connect 0, read 6022, write 0, timeout 0
+Requests/sec:  43349.78
+Transfer/sec:      4.78GB
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 9
+2023-07-29 02:42:31
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.51ms    1.24ms  59.37ms   85.63%
+    Req/Sec     5.45k   797.37    16.37k    73.88%
+  3909454 requests in 1.50m, 430.65GB read
+  Socket errors: connect 0, read 6150, write 0, timeout 0
+Requests/sec:  43392.61
+Transfer/sec:      4.78GB
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 10
+2023-07-29 02:44:05
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.61ms   17.95ms 462.45ms   99.45%
+    Req/Sec     5.45k   809.48    11.46k    73.96%
+  3887143 requests in 1.50m, 428.19GB read
+  Socket errors: connect 0, read 6689, write 0, timeout 0
+Requests/sec:  43162.90
+Transfer/sec:      4.75GB
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 11
+2023-07-29 02:45:37
+#####
+Running 2m test @ http://127.0.0.1:8088/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.48ms    1.03ms  21.04ms   74.39%
+    Req/Sec     5.47k   791.21    14.42k    71.85%
+  3923646 requests in 1.50m, 432.21GB read
+  Socket errors: connect 0, read 5630, write 0, timeout 0
+Requests/sec:  43550.55
+Transfer/sec:      4.80GB
+

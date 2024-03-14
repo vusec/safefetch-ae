@@ -1,0 +1,1 @@
+BOOT_IMAGE=/boot/vmlinuz-5.11.0-midas+ root=UUID=c7b6a122-ac73-46d5-87d3-63548b8a1a7c ro

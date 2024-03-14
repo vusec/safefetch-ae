@@ -1,0 +1,77 @@
+#####
+midas-pt-29-Jul-23-00h05m - Run 1
+2023-07-29 01:59:05
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ SET , 2000676.00 , 10.930 , 1.048 , 8.927 , 16.015 , 16.119 , 17.743 
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 2
+2023-07-29 01:59:40
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ SET , 2007342.50 , 10.798 , 1.072 , 8.831 , 16.207 , 16.303 , 17.759 
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 3
+2023-07-29 02:00:15
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ SET , 1955834.00 , 11.286 , 1.056 , 12.119 , 14.551 , 15.223 , 17.759 
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 4
+2023-07-29 02:00:50
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ SET , 2000916.25 , 10.501 , 1.064 , 10.839 , 17.583 , 17.887 , 28.239 
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 5
+2023-07-29 02:01:30
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ SET , 1665197.88 , 11.505 , 1.360 , 12.071 , 13.127 , 16.415 , 16.767 
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 6
+2023-07-29 02:02:06
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ SET , 1931780.50 , 10.756 , 1.088 , 9.487 , 17.727 , 19.407 , 19.839 
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 7
+2023-07-29 02:02:42
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ SET , 1956293.12 , 11.313 , 1.120 , 9.303 , 15.551 , 17.439 , 17.663 
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 8
+2023-07-29 02:03:18
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ SET , 1947530.38 , 11.272 , 1.088 , 11.863 , 14.511 , 15.015 , 20.367 
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 9
+2023-07-29 02:03:53
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ SET , 1993020.50 , 10.637 , 1.128 , 11.383 , 17.471 , 17.759 , 28.127 
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 10
+2023-07-29 02:04:28
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ SET , 2003642.38 , 10.899 , 1.080 , 8.903 , 15.983 , 16.071 , 17.727 
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 11
+2023-07-29 02:05:01
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ SET , 2000275.88 , 10.909 , 1.056 , 8.927 , 15.975 , 16.063 , 17.791 
+

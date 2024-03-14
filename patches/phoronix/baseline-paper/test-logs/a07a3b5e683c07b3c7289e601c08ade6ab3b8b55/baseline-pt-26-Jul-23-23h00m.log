@@ -1,0 +1,77 @@
+#####
+baseline-pt-26-Jul-23-23h00m - Run 1
+2023-07-27 00:47:56
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2319043.25 , 10.655 , 0.472 , 10.911 , 18.543 , 20.463 , 22.063 
+
+#####
+baseline-pt-26-Jul-23-23h00m - Run 2
+2023-07-27 00:48:26
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2524915.25 , 9.860 , 0.504 , 9.927 , 17.359 , 18.911 , 21.871 
+
+#####
+baseline-pt-26-Jul-23-23h00m - Run 3
+2023-07-27 00:48:56
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2504262.00 , 9.950 , 0.496 , 9.999 , 17.407 , 19.039 , 20.495 
+
+#####
+baseline-pt-26-Jul-23-23h00m - Run 4
+2023-07-27 00:49:26
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2492064.75 , 9.999 , 0.480 , 10.183 , 17.551 , 19.455 , 25.407 
+
+#####
+baseline-pt-26-Jul-23-23h00m - Run 5
+2023-07-27 00:49:56
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2513595.50 , 9.910 , 0.480 , 10.063 , 17.487 , 19.231 , 22.175 
+
+#####
+baseline-pt-26-Jul-23-23h00m - Run 6
+2023-07-27 00:50:29
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2176886.00 , 10.198 , 0.520 , 10.727 , 15.607 , 17.919 , 21.919 
+
+#####
+baseline-pt-26-Jul-23-23h00m - Run 7
+2023-07-27 00:51:02
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2142742.50 , 10.183 , 0.488 , 10.711 , 13.831 , 17.615 , 20.287 
+
+#####
+baseline-pt-26-Jul-23-23h00m - Run 8
+2023-07-27 00:51:33
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2497660.75 , 9.993 , 0.424 , 11.143 , 16.815 , 18.559 , 25.295 
+
+#####
+baseline-pt-26-Jul-23-23h00m - Run 9
+2023-07-27 00:52:04
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2371734.00 , 10.287 , 0.512 , 10.871 , 17.279 , 18.927 , 21.743 
+
+#####
+baseline-pt-26-Jul-23-23h00m - Run 10
+2023-07-27 00:52:35
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2300795.75 , 10.446 , 0.432 , 12.343 , 16.655 , 18.511 , 20.463 
+
+#####
+baseline-pt-26-Jul-23-23h00m - Run 11
+2023-07-27 00:53:08
+#####
+ test , rps , avg_latency_ms , min_latency_ms , p50_latency_ms , p95_latency_ms , p99_latency_ms , max_latency_ms 
+ GET , 2072561.75 , 11.301 , 0.496 , 8.151 , 18.415 , 18.559 , 20.319 
+

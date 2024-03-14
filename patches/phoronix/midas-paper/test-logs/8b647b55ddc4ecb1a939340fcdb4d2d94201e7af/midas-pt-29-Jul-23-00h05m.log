@@ -1,0 +1,143 @@
+#####
+midas-pt-29-Jul-23-00h05m - Run 1
+2023-07-29 02:12:29
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.36ms    4.23ms  52.53ms   85.38%
+    Req/Sec     3.33k   432.09     8.18k    71.60%
+  2386690 requests in 1.50m, 262.94GB read
+Requests/sec:  26490.60
+Transfer/sec:      2.92GB
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 2
+2023-07-29 02:14:03
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.32ms    4.12ms 109.93ms   85.37%
+    Req/Sec     3.34k   417.32     7.30k    71.79%
+  2391580 requests in 1.50m, 263.47GB read
+Requests/sec:  26545.61
+Transfer/sec:      2.92GB
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 3
+2023-07-29 02:15:37
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.34ms    4.18ms  84.91ms   85.47%
+    Req/Sec     3.34k   405.09     5.88k    70.34%
+  2388936 requests in 1.50m, 263.18GB read
+Requests/sec:  26524.26
+Transfer/sec:      2.92GB
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 4
+2023-07-29 02:17:11
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.32ms    4.13ms  80.12ms   85.35%
+    Req/Sec     3.34k   399.90     5.95k    70.78%
+  2391960 requests in 1.50m, 263.52GB read
+Requests/sec:  26548.04
+Transfer/sec:      2.92GB
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 5
+2023-07-29 02:18:45
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.35ms    4.27ms 169.07ms   85.70%
+    Req/Sec     3.34k   417.44     5.85k    70.75%
+  2389827 requests in 1.50m, 263.28GB read
+Requests/sec:  26532.01
+Transfer/sec:      2.92GB
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 6
+2023-07-29 02:20:19
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.37ms    4.34ms 161.88ms   85.86%
+    Req/Sec     3.33k   413.77     6.79k    71.98%
+  2387365 requests in 1.50m, 263.01GB read
+Requests/sec:  26497.96
+Transfer/sec:      2.92GB
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 7
+2023-07-29 02:21:54
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.34ms    4.15ms  96.51ms   85.30%
+    Req/Sec     3.34k   404.73     5.20k    70.04%
+  2389304 requests in 1.50m, 263.22GB read
+Requests/sec:  26527.99
+Transfer/sec:      2.92GB
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 8
+2023-07-29 02:23:28
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.33ms    4.15ms 128.12ms   85.37%
+    Req/Sec     3.33k   406.21     6.20k    70.05%
+  2385672 requests in 1.50m, 262.82GB read
+Requests/sec:  26481.71
+Transfer/sec:      2.92GB
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 9
+2023-07-29 02:25:02
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.34ms    4.17ms 126.11ms   85.43%
+    Req/Sec     3.33k   409.61     7.74k    71.33%
+  2385643 requests in 1.50m, 262.82GB read
+Requests/sec:  26479.98
+Transfer/sec:      2.92GB
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 10
+2023-07-29 02:26:36
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.34ms    4.15ms 146.59ms   85.42%
+    Req/Sec     3.33k   429.92     6.65k    71.59%
+  2387450 requests in 1.50m, 263.02GB read
+Requests/sec:  26497.76
+Transfer/sec:      2.92GB
+
+#####
+midas-pt-29-Jul-23-00h05m - Run 11
+2023-07-29 02:28:08
+#####
+Running 2m test @ https://127.0.0.1:8089/test.html
+  8 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.35ms    4.20ms  83.36ms   85.41%
+    Req/Sec     3.33k   406.11     5.47k    72.11%
+  2387494 requests in 1.50m, 263.02GB read
+Requests/sec:  26502.83
+Transfer/sec:      2.92GB
+

@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<!--Phoronix Test Suite v10.8.4-->
+<PhoronixTestSuite>
+  <Generated>
+    <Title>baseline-pt-26-Jul-23-23h00m</Title>
+    <LastModified>2023-07-27 01:52:14</LastModified>
+    <TestClient>Phoronix Test Suite v10.8.4</TestClient>
+    <Description>Intel Core i7-6700 testing with a ASRock B150 Pro4/3.1 (P1.30 BIOS) and Intel HD 530 on Ubuntu 22.04 via the Phoronix Test Suite.</Description>
+  </Generated>
+  <System>
+    <Identifier>baseline-pt-26-Jul-23-23h00m</Identifier>
+    <Hardware>Processor: Intel Core i7-6700 @ 4.00GHz (4 Cores / 8 Threads), Motherboard: ASRock B150 Pro4/3.1 (P1.30 BIOS), Chipset: Intel Xeon E3-1200 v5/E3-1500, Memory: 32GB, Disk: 120GB SanDisk SSD PLUS, Graphics: Intel HD 530 (1150MHz), Audio: Intel 100 /C230, Network: Intel I219-V</Hardware>
+    <Software>OS: Ubuntu 22.04, Kernel: 5.11.0-dfcache+ (x86_64), Vulkan: 1.3.224, Compiler: GCC 11.3.0, File-System: ext4</Software>
+    <User>ubuntu</User>
+    <TimeStamp>2023-07-27 00:11:31</TimeStamp>
+    <TestClientVersion>10.8.4</TestClientVersion>
+    <Notes></Notes>
+    <JSON>{"compiler-configuration":"--build=x86_64-linux-gnu --disable-vtable-verify --disable-werror --enable-bootstrap --enable-cet --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-gnu-unique-object --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --enable-libphobos-checking=release --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-link-serialization=2 --enable-multiarch --enable-multilib --enable-nls --enable-objc-gc=auto --enable-offload-targets=nvptx-none=\/build\/gcc-11-aYxV0E\/gcc-11-11.3.0\/debian\/tmp-nvptx\/usr,amdgcn-amdhsa=\/build\/gcc-11-aYxV0E\/gcc-11-11.3.0\/debian\/tmp-gcn\/usr --enable-plugin --enable-shared --enable-threads=posix --host=x86_64-linux-gnu --program-prefix=x86_64-linux-gnu- --target=x86_64-linux-gnu --with-abi=m64 --with-arch-32=i686 --with-build-config=bootstrap-lto-lean --with-default-libstdcxx-abi=new --with-gcc-major-version-only --with-multilib-list=m32,m64,mx32 --with-target-system-zlib=auto --with-tune=generic --without-cuda-driver -v","cpu-scaling-governor":"intel_pstate performance (EPP: performance)","cpu-microcode":"0xf0","cpu-thermald":"2.4.9","environment-variables":"MAKEFLAGS=\"-- BUILD_STRING=baseline-pt\" MFLAGS=","python":"Python 3.10.6","security":"itlb_multihit: vulnerable + l1tf: Mitigation of PTE Inversion + mds: Mitigation of Clear buffers; SMT vulnerable + meltdown: Mitigation of PTI + spec_store_bypass: Mitigation of SSB disabled via prctl and seccomp + spectre_v1: Mitigation of usercopy\/swapgs barriers and __user pointer sanitization + spectre_v2: Mitigation of Full generic retpoline IBPB: conditional IBRS_FW STIBP: conditional RSB filling + srbds: Mitigation of Microcode + tsx_async_abort: Mitigation of Clear buffers; SMT vulnerable"}</JSON>
+  </System>
+  <Result>
+    <Identifier>pts/ipc-benchmark-1.0.0</Identifier>
+    <Title>IPC_benchmark</Title>
+    <AppVersion></AppVersion>
+    <Arguments>tcp 128</Arguments>
+    <Description>Type: TCP Socket - Message Bytes: 128</Description>
+    <Scale>Messages Per Second</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>baseline-pt-26-Jul-23-23h00m</Identifier>
+        <Value>1662852</Value>
+        <RawString>1652200:1702622:1650348:1651375:1651437:1683188:1667881:1662408:1657989:1653510:1658418</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":""},"test-run-times":"6.64:6.29:6.46:6.45:6.45:6.35:6.40:6.42:6.43:6.45:6.43"}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/openssl-3.1.0</Identifier>
+    <Title>OpenSSL</Title>
+    <AppVersion>3.1</AppVersion>
+    <Arguments>sha512</Arguments>
+    <Description>Algorithm: SHA512</Description>
+    <Scale>byte/s</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>baseline-pt-26-Jul-23-23h00m</Identifier>
+        <Value>1425017614</Value>
+        <RawString>1425051080:1424881330:1424979480:1424829070:1425273340:1427129270:1424114210:1424702240:1424498270:1424971320:1424764140</RawString>
+        <JSON>{"test-run-times":"180.05:180.00:180.00:180.00:180.00:180.00:180.01:180.00:180.00:180.00:180.00"}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/redis-1.4.0</Identifier>
+    <Title>Redis</Title>
+    <AppVersion>7.0.4</AppVersion>
+    <Arguments>-t get -c 50</Arguments>
+    <Description>Test: GET - Parallel Connections: 50</Description>
+    <Scale>Requests Per Second</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>baseline-pt-26-Jul-23-23h00m</Identifier>
+        <Value>2356023.77</Value>
+        <RawString>2319043.25:2524915.25:2504262:2492064.75:2513595.5:2176886:2142742.5:2497660.75:2371734:2300795.75:2072561.75</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CXX","compiler":"g++","compiler-options":"-MM -MT -g3 -fvisibility=hidden -O3"},"test-run-times":"27.68:25.90:26.02:26.08:25.98:29.00:29.44:26.11:27.11:27.75:30.16"}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/redis-1.4.0</Identifier>
+    <Title>Redis</Title>
+    <AppVersion>7.0.4</AppVersion>
+    <Arguments>-t set -c 50</Arguments>
+    <Description>Test: SET - Parallel Connections: 50</Description>
+    <Scale>Requests Per Second</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>baseline-pt-26-Jul-23-23h00m</Identifier>
+        <Value>1963589.50</Value>
+        <RawString>2015596.25:1998596.88:2011056.38:1841925:1991194.88:2003481.75:2004927.88:2008713.5:1715992.25:2012513.5:1995486.25</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CXX","compiler":"g++","compiler-options":"-MM -MT -g3 -fvisibility=hidden -O3"},"test-run-times":"30.85:31.06:30.91:33.22:31.15:31.01:30.99:30.94:35.18:30.89:31.11"}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/pybench-1.1.3</Identifier>
+    <Title>PyBench</Title>
+    <AppVersion>2018-02-16</AppVersion>
+    <Arguments></Arguments>
+    <Description>Total For Average Test Times</Description>
+    <Scale>Milliseconds</Scale>
+    <Proportion>LIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>baseline-pt-26-Jul-23-23h00m</Identifier>
+        <Value>1133</Value>
+        <RawString>1131:1133:1132:1134:1133:1132:1131:1132:1131:1138:1134</RawString>
+        <JSON>{"test-run-times":"26.41:26.42:26.37:26.38:26.41:26.34:26.37:26.34:26.37:26.53:26.44"}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/nginx-3.0.1</Identifier>
+    <Title>nginx</Title>
+    <AppVersion>1.23.2</AppVersion>
+    <Arguments>-c 100</Arguments>
+    <Description>Connections: 100</Description>
+    <Scale>Requests Per Second</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>baseline-pt-26-Jul-23-23h00m</Identifier>
+        <Value>28533.27</Value>
+        <RawString>28506.06:28551.23:28571.59:28550.6:28555.4:28492.19:28456.58:28500.74:28577.66:28535.24:28568.67</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-lluajit-5.1 -lm -lssl -lcrypto -lpthread -ldl -std=c99 -O2"},"test-run-times":"90.13:90.11:90.12:90.11:90.09:90.11:90.10:90.08:90.11:90.11:90.11"}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/apache-3.0.0</Identifier>
+    <Title>Apache HTTP Server</Title>
+    <AppVersion>2.4.56</AppVersion>
+    <Arguments>-c 100</Arguments>
+    <Description>Concurrent Requests: 100</Description>
+    <Scale>Requests Per Second</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>baseline-pt-26-Jul-23-23h00m</Identifier>
+        <Value>50559.65</Value>
+        <RawString>50213.37:50480.48:50394.13:50717.04:50581.98:50631.86:50621.38:50484.66:50752.93:50571.4:50706.97</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-lluajit-5.1 -lm -lssl -lcrypto -lpthread -ldl -std=c99 -O2"},"test-run-times":"90.13:90.10:90.10:90.10:90.09:90.10:90.10:90.10:90.10:90.11:90.12"}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/git-1.1.0</Identifier>
+    <Title>Git</Title>
+    <AppVersion></AppVersion>
+    <Arguments></Arguments>
+    <Description>Time To Complete Common Git Commands</Description>
+    <Scale>Seconds</Scale>
+    <Proportion>LIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>baseline-pt-26-Jul-23-23h00m</Identifier>
+        <Value>59.178</Value>
+        <RawString>58.865:59.087:59.038:60.943:59.074:58.665:59.145:59.095:59.103:58.947:58.992</RawString>
+        <JSON>{"install-footnote":"git version 2.34.1","test-run-times":"58.87:59.09:59.04:60.94:59.07:58.67:59.14:59.09:59.10:58.95:58.99"}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+</PhoronixTestSuite>

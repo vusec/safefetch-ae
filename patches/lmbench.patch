@@ -1,0 +1,20 @@
+--- lmbench-3.0-a9_rpc_fix/scripts/build	2006-06-27 18:25:18.000000000 +0200
++++ lmbench-3.0-a9/scripts/build	2022-01-19 16:31:38.670209583 +0100
+@@ -33,7 +33,7 @@
+ 	fi
+ fi
+ rm -f ${BASE}$$ ${BASE}$$.o ${BASE}$$.c
+-	
++
+ # check for IA64 HP-UX w/ HP's ANSI compiler; may need pointer swizzling
+ arch=`echo $OS | awk -F- '{print $1;}'`
+ if [ "X$CC" = "Xcc" -a "X$arch" = "Xia64" ]
+@@ -284,5 +284,8 @@
+ 
+ if [ ! -d ${BINDIR} ]; then mkdir -p ${BINDIR}; fi
+ 
++LDLIBS="${LDLIBS} -ltirpc"
++CFLAGS="${CFLAGS} -I/usr/include/tirpc"
++
+ # now go ahead and build everything!
+ ${MAKE} OS="${OS}" CC="${CC}" CFLAGS="${CFLAGS}" LDLIBS="${LDLIBS}" O="${BINDIR}" $*

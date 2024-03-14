@@ -1,0 +1,138 @@
+Slot:	00:00.0
+Class:	Host bridge [0600]
+Vendor:	Intel Corporation [8086]
+Device:	Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor Host Bridge/DRAM Registers [191f]
+SVendor:	ASRock Incorporation [1849]
+SDevice:	Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor Host Bridge/DRAM Registers [191f]
+Rev:	07
+Driver:	skl_uncore
+
+Slot:	00:02.0
+Class:	VGA compatible controller [0300]
+Vendor:	Intel Corporation [8086]
+Device:	HD Graphics 530 [1912]
+SVendor:	ASRock Incorporation [1849]
+SDevice:	HD Graphics 530 [1912]
+Rev:	06
+Driver:	i915
+
+Slot:	00:14.0
+Class:	USB controller [0c03]
+Vendor:	Intel Corporation [8086]
+Device:	100 Series/C230 Series Chipset Family USB 3.0 xHCI Controller [a12f]
+SVendor:	ASRock Incorporation [1849]
+SDevice:	100 Series/C230 Series Chipset Family USB 3.0 xHCI Controller [a12f]
+Rev:	31
+ProgIf:	30
+Driver:	xhci_hcd
+
+Slot:	00:14.2
+Class:	Signal processing controller [1180]
+Vendor:	Intel Corporation [8086]
+Device:	100 Series/C230 Series Chipset Family Thermal Subsystem [a131]
+SVendor:	ASRock Incorporation [1849]
+SDevice:	100 Series/C230 Series Chipset Family Thermal Subsystem [a131]
+Rev:	31
+Driver:	intel_pch_thermal
+Module:	intel_pch_thermal
+
+Slot:	00:16.0
+Class:	Communication controller [0780]
+Vendor:	Intel Corporation [8086]
+Device:	100 Series/C230 Series Chipset Family MEI Controller #1 [a13a]
+SVendor:	ASRock Incorporation [1849]
+SDevice:	100 Series/C230 Series Chipset Family MEI Controller [a13a]
+Rev:	31
+
+Slot:	00:17.0
+Class:	SATA controller [0106]
+Vendor:	Intel Corporation [8086]
+Device:	Q170/Q150/B150/H170/H110/Z170/CM236 Chipset SATA Controller [AHCI Mode] [a102]
+SVendor:	ASRock Incorporation [1849]
+SDevice:	Q170/Q150/B150/H170/H110/Z170/CM236 Chipset SATA Controller [AHCI Mode] [a102]
+Rev:	31
+ProgIf:	01
+Driver:	ahci
+
+Slot:	00:1c.0
+Class:	PCI bridge [0604]
+Vendor:	Intel Corporation [8086]
+Device:	100 Series/C230 Series Chipset Family PCI Express Root Port #5 [a114]
+Rev:	f1
+Driver:	pcieport
+
+Slot:	00:1d.0
+Class:	PCI bridge [0604]
+Vendor:	Intel Corporation [8086]
+Device:	100 Series/C230 Series Chipset Family PCI Express Root Port #9 [a118]
+Rev:	f1
+Driver:	pcieport
+
+Slot:	00:1d.3
+Class:	PCI bridge [0604]
+Vendor:	Intel Corporation [8086]
+Device:	100 Series/C230 Series Chipset Family PCI Express Root Port #12 [a11b]
+Rev:	f1
+Driver:	pcieport
+
+Slot:	00:1f.0
+Class:	ISA bridge [0601]
+Vendor:	Intel Corporation [8086]
+Device:	B150 Chipset LPC/eSPI Controller [a148]
+SVendor:	ASRock Incorporation [1849]
+SDevice:	B150 Chipset LPC/eSPI Controller [a148]
+Rev:	31
+
+Slot:	00:1f.2
+Class:	Memory controller [0580]
+Vendor:	Intel Corporation [8086]
+Device:	100 Series/C230 Series Chipset Family Power Management Controller [a121]
+SVendor:	ASRock Incorporation [1849]
+SDevice:	100 Series/C230 Series Chipset Family Power Management Controller [a121]
+Rev:	31
+
+Slot:	00:1f.3
+Class:	Audio device [0403]
+Vendor:	Intel Corporation [8086]
+Device:	100 Series/C230 Series Chipset Family HD Audio Controller [a170]
+SVendor:	ASRock Incorporation [1849]
+SDevice:	100 Series/C230 Series Chipset Family HD Audio Controller [5892]
+Rev:	31
+Driver:	snd_hda_intel
+
+Slot:	00:1f.4
+Class:	SMBus [0c05]
+Vendor:	Intel Corporation [8086]
+Device:	100 Series/C230 Series Chipset Family SMBus [a123]
+SVendor:	ASRock Incorporation [1849]
+SDevice:	100 Series/C230 Series Chipset Family SMBus [a123]
+Rev:	31
+Driver:	i801_smbus
+
+Slot:	00:1f.6
+Class:	Ethernet controller [0200]
+Vendor:	Intel Corporation [8086]
+Device:	Ethernet Connection (2) I219-V [15b8]
+SVendor:	ASRock Incorporation [1849]
+SDevice:	Ethernet Connection (2) I219-V [15b8]
+Rev:	31
+Driver:	e1000e
+
+Slot:	02:00.0
+Class:	USB controller [0c03]
+Vendor:	ASMedia Technology Inc. [1b21]
+Device:	ASM1142 USB 3.1 Host Controller [1242]
+SVendor:	ASRock Incorporation [1849]
+SDevice:	ASM1142 USB 3.1 Host Controller [1242]
+ProgIf:	30
+Driver:	xhci_hcd
+
+Slot:	03:00.0
+Class:	Serial controller [0700]
+Vendor:	Oxford Semiconductor Ltd [1415]
+Device:	OXPCIe952 Dual Native 950 UART [c158]
+SVendor:	Oxford Semiconductor Ltd [1415]
+SDevice:	OXPCIe952 Dual Native 950 UART [c158]
+ProgIf:	02
+Driver:	serial
+

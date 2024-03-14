@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<!--Phoronix Test Suite v10.8.4-->
+<PhoronixTestSuite>
+  <Generated>
+    <Title>whitelist-paper</Title>
+    <LastModified>2024-03-14 01:41:03</LastModified>
+    <TestClient>Phoronix Test Suite v10.8.4</TestClient>
+    <Description>whitelist-paper</Description>
+    <Notes></Notes>
+    <InternalTags></InternalTags>
+    <ReferenceID></ReferenceID>
+    <PreSetEnvironmentVariables></PreSetEnvironmentVariables>
+  </Generated>
+  <System>
+    <Identifier>adaptive-pt-pinning-whitelist</Identifier>
+    <Hardware>Processor: Intel Core i7-6700 @ 4.00GHz (4 Cores / 8 Threads), Motherboard: ASRock B150 Pro4/3.1 (P1.30 BIOS), Chipset: Intel Xeon E3-1200 v5/E3-1500, Memory: 32GB, Disk: 120GB SanDisk SSD PLUS, Graphics: Intel HD 530 (1150MHz), Audio: Intel 100 /C230, Network: Intel I219-V</Hardware>
+    <Software>OS: Ubuntu 22.04, Kernel: 5.11.0-dfcache+ (x86_64), Vulkan: 1.3.224, Compiler: GCC 11.4.0, File-System: ext4</Software>
+    <User>ubuntu</User>
+    <TimeStamp>2024-02-05 14:38:07</TimeStamp>
+    <TestClientVersion>10.8.4</TestClientVersion>
+    <Notes></Notes>
+    <JSON>{"compiler-configuration":"--build=x86_64-linux-gnu --disable-vtable-verify --disable-werror --enable-bootstrap --enable-cet --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-gnu-unique-object --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --enable-libphobos-checking=release --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-link-serialization=2 --enable-multiarch --enable-multilib --enable-nls --enable-objc-gc=auto --enable-offload-targets=nvptx-none=\/build\/gcc-11-XeT9lY\/gcc-11-11.4.0\/debian\/tmp-nvptx\/usr,amdgcn-amdhsa=\/build\/gcc-11-XeT9lY\/gcc-11-11.4.0\/debian\/tmp-gcn\/usr --enable-plugin --enable-shared --enable-threads=posix --host=x86_64-linux-gnu --program-prefix=x86_64-linux-gnu- --target=x86_64-linux-gnu --with-abi=m64 --with-arch-32=i686 --with-build-config=bootstrap-lto-lean --with-default-libstdcxx-abi=new --with-gcc-major-version-only --with-multilib-list=m32,m64,mx32 --with-target-system-zlib=auto --with-tune=generic --without-cuda-driver -v","cpu-scaling-governor":"intel_pstate performance (EPP: performance)","cpu-microcode":"0xf0","cpu-thermald":"2.4.9","environment-variables":"MAKEFLAGS=\"-- BUILD_STRING=adaptive-pt-pinning-whitelist-defragfix-2Ord-63Sw\" MFLAGS=","python":"Python 3.10.12","security":"itlb_multihit: vulnerable + l1tf: Mitigation of PTE Inversion + mds: Mitigation of Clear buffers; SMT vulnerable + meltdown: Mitigation of PTI + spec_store_bypass: Mitigation of SSB disabled via prctl and seccomp + spectre_v1: Mitigation of usercopy\/swapgs barriers and __user pointer sanitization + spectre_v2: Mitigation of Full generic retpoline IBPB: conditional IBRS_FW STIBP: conditional RSB filling + srbds: Mitigation of Microcode + tsx_async_abort: Mitigation of Clear buffers; SMT vulnerable"}</JSON>
+  </System>
+  <Result>
+    <Identifier>pts/ipc-benchmark-1.0.0</Identifier>
+    <Title>IPC_benchmark</Title>
+    <AppVersion></AppVersion>
+    <Arguments>tcp 128</Arguments>
+    <Description>Type: TCP Socket - Message Bytes: 128</Description>
+    <Scale>Messages Per Second</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>adaptive-pt-pinning-whitelist</Identifier>
+        <Value>1650807</Value>
+        <RawString>1650824:1654066:1648476:1657057:1650848:1648535:1647722:1648708:1650283:1649924:1652436</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":""},"test-run-times":"6.64:6.44:6.46:6.43:6.45:6.46:6.46:6.46:6.46:6.46:6.45"}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/openssl-3.1.0</Identifier>
+    <Title>OpenSSL</Title>
+    <AppVersion>3.1</AppVersion>
+    <Arguments>sha512</Arguments>
+    <Description>Algorithm: SHA512</Description>
+    <Scale>byte/s</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>adaptive-pt-pinning-whitelist</Identifier>
+        <Value>1432988567</Value>
+        <RawString>1433028390:1433024810:1432952620:1433015870:1433022050:1432969730:1432987650:1432994900:1432947720:1432976570:1432953930</RawString>
+        <JSON>{"test-run-times":"180.05:180.01:180.00:180.00:180.00:180.00:180.00:180.00:180.00:180.00:180.00"}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/redis-1.4.0</Identifier>
+    <Title>Redis</Title>
+    <AppVersion>7.0.4</AppVersion>
+    <Arguments>-t get -c 50</Arguments>
+    <Description>Test: GET - Parallel Connections: 50</Description>
+    <Scale>Requests Per Second</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>adaptive-pt-pinning-whitelist</Identifier>
+        <Value>2413859.74</Value>
+        <RawString>2455236.75:2524405.5:2472721.25:2114381.5:2516781.25:2366666:2532169:2013404.88:2510560.75:2522362:2523768.25</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CXX","compiler":"g++","compiler-options":"-MM -MT -g3 -fvisibility=hidden -O3"},"test-run-times":"26.44:25.92:26.33:29.69:25.92:27.17:25.79:30.87:25.93:25.93:25.83"}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/redis-1.4.0</Identifier>
+    <Title>Redis</Title>
+    <AppVersion>7.0.4</AppVersion>
+    <Arguments>-t set -c 50</Arguments>
+    <Description>Test: SET - Parallel Connections: 50</Description>
+    <Scale>Requests Per Second</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>adaptive-pt-pinning-whitelist</Identifier>
+        <Value>1870615.03</Value>
+        <RawString>1671097.12:2017873.88:1754171.25:1675791.25:2016490.5:2002438.88:1922224.25:2021218.12:1977101.38:1844643:1673715.75</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CXX","compiler":"g++","compiler-options":"-MM -MT -g3 -fvisibility=hidden -O3"},"test-run-times":"35.99:30.83:34.61:35.94:30.84:31.02:32.05:30.78:31.36:33.12:35.97"}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/pybench-1.1.3</Identifier>
+    <Title>PyBench</Title>
+    <AppVersion>2018-02-16</AppVersion>
+    <Arguments></Arguments>
+    <Description>Total For Average Test Times</Description>
+    <Scale>Milliseconds</Scale>
+    <Proportion>LIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>adaptive-pt-pinning-whitelist</Identifier>
+        <Value>1139</Value>
+        <RawString>1138:1137:1145:1139:1146:1138:1138:1137:1141:1139:1136</RawString>
+        <JSON>{"test-run-times":"26.37:26.35:26.47:26.36:26.50:26.35:26.33:26.30:26.40:26.28:26.22"}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/nginx-3.0.1</Identifier>
+    <Title>nginx</Title>
+    <AppVersion>1.23.2</AppVersion>
+    <Arguments>-c 100</Arguments>
+    <Description>Connections: 100</Description>
+    <Scale>Requests Per Second</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>adaptive-pt-pinning-whitelist</Identifier>
+        <Value>28401.88</Value>
+        <RawString>28427.54:28397.85:28329.63:28453.79:28381.5:28372.45:28399.94:28435.08:28450.54:28363.59:28408.76</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-lluajit-5.1 -lm -lssl -lcrypto -lpthread -ldl -std=c99 -O2"},"test-run-times":"90.12:90.10:90.10:90.13:90.11:90.07:90.14:90.11:90.12:90.10:90.12"}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/apache-3.0.0</Identifier>
+    <Title>Apache HTTP Server</Title>
+    <AppVersion>2.4.56</AppVersion>
+    <Arguments>-c 100</Arguments>
+    <Description>Concurrent Requests: 100</Description>
+    <Scale>Requests Per Second</Scale>
+    <Proportion>HIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>adaptive-pt-pinning-whitelist</Identifier>
+        <Value>50278.55</Value>
+        <RawString>50226.68:50319.07:50264.27:50200.64:50374.43:50292.66:50298.31:50300.79:50263.91:50359.42:50163.88</RawString>
+        <JSON>{"compiler-options":{"compiler-type":"CC","compiler":"gcc","compiler-options":"-lluajit-5.1 -lm -lssl -lcrypto -lpthread -ldl -std=c99 -O2"},"test-run-times":"90.13:90.11:90.10:90.10:90.11:90.11:90.10:90.10:90.10:90.10:90.11"}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+  <Result>
+    <Identifier>pts/git-1.1.0</Identifier>
+    <Title>Git</Title>
+    <AppVersion></AppVersion>
+    <Arguments></Arguments>
+    <Description>Time To Complete Common Git Commands</Description>
+    <Scale>Seconds</Scale>
+    <Proportion>LIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>adaptive-pt-pinning-whitelist</Identifier>
+        <Value>59.113</Value>
+        <RawString>58.964:58.869:58.915:58.781:59.733:59.049:59.093:60.238:58.942:59.192:58.471</RawString>
+        <JSON>{"install-footnote":"git version 2.34.1","test-run-times":"58.96:58.87:58.91:58.78:59.73:59.05:59.09:60.24:58.94:59.19:58.47"}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+</PhoronixTestSuite>
