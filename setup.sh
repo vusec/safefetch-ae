@@ -16,9 +16,9 @@ install_all () {
      mkdir -p benchmarks
      sudo apt-get install libntirpc-dev flex bison libelf-dev libssl-dev bc build-essential libncurses-dev
 
-     echo "### Cloning SafeFetch kernel..."
-     git clone git@github.com:vusec/safefetch.git safefetch
-     echo "### Finished cloning Safefetch kernel..."
+     #echo "### Cloning SafeFetch kernel..."
+     #git clone git@github.com:vusec/safefetch.git safefetch
+     #echo "### Finished cloning Safefetch kernel..."
 
      # Install LMBench benchmarking suite
      echo "### Installing LMBench..."
