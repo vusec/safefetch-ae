@@ -45,7 +45,7 @@ result: phoronix_result
 paper: 
 	cd ./playground/paper/scripts &&  python3 ./generate_plots.py && cd .. && make all && cd ../..
 
-make all-paper: result paper
+all-paper: result paper
 
 # Kernel compilation
 def_safefetch_config:
