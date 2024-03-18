@@ -7,3 +7,4 @@ export KERNEL_VERSION=5.11.0
 export KERNEL_DIR=safefetch
 [ -z "$RUNS" ] && export RUNS=11
 export FORCE_TIMES_TO_RUN=$RUNS
+export SECURITY_RUNS=5

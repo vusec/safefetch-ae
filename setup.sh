@@ -128,10 +128,10 @@ install_all () {
      cp -r './CVE-2016-6516-exploit/Scott Bauer' ./exploit_cve_2016_6516
      mv ./exploit_cve_2016_6516 ../exploit_cve_2016_6516
      rm -rf ./CVE-2016-6516-exploit
-     
+
      echo "### CVE-2016-6516 exploit installed!"
 
-     rm -rf tmp
+     cd .. && rm -rf tmp
 
      echo "### Installation complete!"
 

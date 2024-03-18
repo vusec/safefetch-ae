@@ -117,4 +117,10 @@ run_performance_artifact:
 	@echo Running performance artifact on local machine 
 	./run_performance_artifact.sh $(KERNEL_VERSION)
 
+
+# Running security artifact
+run_security_artifact:
+	@echo Running performance artifact on local machine 
+	./run_security_artifact.sh $(KERNEL_VERSION)
+
 #.PHONY: paper 
