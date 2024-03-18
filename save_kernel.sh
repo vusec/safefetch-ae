@@ -14,12 +14,14 @@ then
     [[ !  -z  $3  ]] && echo Saved: $3 || exit 125
     if [[ ! -d playground/kernels/$3 ]];
     then 
+        sudo update-grub2
         echo "Error - no kernel directory named:"$3
         exit 125
     fi
 
     if [[ $2 == "no-version" ]]; 
-    then 
+    then
+        sudo update-grub2 
         echo "Error - trying to load a non-stock kernel - no-version"
         exit 125
     fi       

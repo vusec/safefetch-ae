@@ -4,6 +4,9 @@
 [[ !  -z  $1  ]] || exit
 
 execute_security_artifact () {
+    # enter exploit dir
+    cd exploit_cve_2016_6516
+
     mkdir -p ../playground/security/$1
     echo 'reproductions' > ../playground/security/$1/results.csv
     # Clean dmesg
@@ -19,6 +22,9 @@ execute_security_artifact () {
         # Clear dmesg
         sudo dmesg -C 
     done
+
+    # Back to top
+    cd ..
 }
 
 run_baseline_and_safefetch_configs () {
@@ -73,9 +79,8 @@ run_baseline_and_safefetch_configs () {
 
 if [[ $1 == 'exploit' ]]; then
    # Build the POC for the CVE
-   cd exploit_cve_2016_6516 && gcc doublefetch.c  -pthread -o exploit
+   cd exploit_cve_2016_6516 && gcc doublefetch.c  -pthread -o exploit && cd ..
    run_baseline_and_safefetch_configs
-   cd ..
    exit 0
 else
    echo 'Cannot run security artifact on current kernel must be kernel 5.11.0-exploit+'

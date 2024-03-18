@@ -273,7 +273,7 @@ respective results on her/his machine.
 \newpage
 \section{Security Artifact}
 In the following subsection the evaluator can see the number of reproductions of \texttt{CVE-2016-6516} 
-across 11 iterations when running the artifact on a baseline kernel (that doesn't use SafeFetch) and on a 
+across 5 iterations when running the artifact on a baseline kernel (that doesn't use SafeFetch) and on a 
 SafeFetch protected kernel.
 Additionally we also show the average per-iteration reproductions of the bug.
 The evaluator must initially run the security artifact on it's local machine as 
@@ -284,7 +284,7 @@ Conversely, on a SafeFetch protected kernel the \textbf{Reproductions} column sh
 which signals that SafeFetch is able to thwart the bug.
 
 \begin{table}[!h]
-  \caption{\texttt{CVE-2016-6516} reproductions across 11 iterations. (baseline kernel)}
+  \caption{\texttt{CVE-2016-6516} reproductions across 5 iterations. (baseline kernel)}
   \begin{center}
   \resizebox{0.25\columnwidth}{!}{%
   \input{tables/security_baseline.tex}
@@ -294,7 +294,7 @@ which signals that SafeFetch is able to thwart the bug.
 \label{tab:security-baseline-local}
 \end{table}
 \begin{table}[!h]
-  \caption{\texttt{CVE-2016-6516} reproductions across 11 iterations. (kernel defended with SafeFetch)}
+  \caption{\texttt{CVE-2016-6516} reproductions across 5 iterations. (kernel defended with SafeFetch)}
   \begin{center}
   \resizebox{0.25\columnwidth}{!}{%
   \input{tables/security_safefetch.tex}

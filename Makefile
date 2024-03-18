@@ -104,7 +104,6 @@ clean_kernels:
 	./save_kernel.sh -silent-clean whitelist
 	./save_kernel.sh -silent-clean midas
 	./save_kernel.sh -silent-clean exploit
-	sudo update-grub2
 
 load_kernel: clean_kernels
 	@echo Loading kernel $(KERNEL_NAME) from $(SAVED_DIR)
@@ -120,7 +119,12 @@ run_performance_artifact:
 
 # Running security artifact
 run_security_artifact:
-	@echo Running performance artifact on local machine 
+	@echo Running security artifact on local machine 
 	./run_security_artifact.sh $(KERNEL_VERSION)
+
+clean_artifact: clean_kernels
+	@echo Cleaning installed kernels and reverting to default machine kernel
+	./clean_artifact.sh
+
 
 #.PHONY: paper 
