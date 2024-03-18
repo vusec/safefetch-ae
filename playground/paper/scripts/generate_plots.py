@@ -187,6 +187,7 @@ def select_benchmark_dirs(path, is_paper):
 def select_security_dirs(path, file):
     if  not os.path.isdir(path):
         return None
+
     bench_dirs = find_all_valid_benchmark_result_dirs(path)
     final_bench_dirs = []
 
@@ -581,8 +582,8 @@ if __name__ == '__main__':
              plot_column = "avg_rounded"
          bench_results = aggregate_numeric_results(bench_dirs, plot_column)
          stddev_results = aggregate_numeric_results(bench_dirs, "stddev")
-         #if enable_debug:
-         #   print("Ordered results {}".format(bench_results.keys()))
+         if enable_debug:
+            print_results(benchmark, bench_results, stddev_results, blueprints[benchmark], direction)
          if (benchmark == "lmbench"):
              with open("../tables/lmbench_performance_{}.tex".format(is_paper), "w") as table_file:
                generate_latex_performance_table(benchmark, bench_results, stddev_results, blueprints[benchmark], table_file)
