@@ -1,5 +1,5 @@
 
-COMPILER=gcc-8
+COMPILER=gcc
 EXTRA_FLAGS=-j8 #V=1
 SAFEFETCH_DIR=safefetch
 MIDAS_DIR=midas
@@ -91,6 +91,7 @@ all_local_midas: local_midas_config midas_config compile_midas
 all_default_midas: def_midas_config midas_config compile_midas
 
 
+# Loading the kernel onto the machine
 version:
 	@echo $(KERNEL_VERSION)
 
@@ -104,5 +105,12 @@ clean_kernels:
 load_kernel: clean_kernels
 	@echo Loading kernel $(KERNEL_NAME) from $(SAVED_DIR)
 	./save_kernel.sh -restore $(KERNEL_NAME) $(SAVED_DIR)
+	./configure_grub.sh
+
+# Running performance artifact
+
+run_performance_artifact:
+	@echo Running performance artifact on local machine 
+	./run_performance_artifact.sh $(KERNEL_VERSION)
 
 #.PHONY: paper 
