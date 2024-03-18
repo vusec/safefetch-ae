@@ -161,6 +161,7 @@ def find_all_valid_benchmark_result_dirs(root_path):
     return benchmark_result_dirs
 
 def select_benchmark_dirs(path, is_paper):
+
     bench_dirs = find_all_valid_benchmark_result_dirs(path)
 
     final_bench_dirs = []
@@ -184,6 +185,8 @@ def select_benchmark_dirs(path, is_paper):
     return final_bench_dirs
 
 def select_security_dirs(path, file):
+    if  not os.path.isdir(path):
+        return None
     bench_dirs = find_all_valid_benchmark_result_dirs(path)
     final_bench_dirs = []
 
