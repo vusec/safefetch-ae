@@ -20,7 +20,7 @@ baseline_pattern = "baseline"
 
 enable_debug = True
 
-output_configs = [1]
+output_configs = [1, 0]
 
 config_patterns = [ "baseline", "safefetch", "whitelist", "midas"]
 
@@ -141,7 +141,6 @@ def get_simplified_xaxis_names(benchmark, benchmark_blueprint):
            simplified_xaxis += [ xmember ]
     return simplified_xaxis
 def search_keywords(benchmark, keywords):
-    print(keywords)
     for keyword in reversed(keywords):
         if keyword in labels[benchmark]["legend-keywords"]:
            return labels[benchmark]["legend-keywords"][keyword]
@@ -264,7 +263,6 @@ def plot_normalized_barchart(bechnmark, bench_results, stddev_results, bench_blu
         if direction != None:
          for j in range(len(bench_blueprint)):
            if direction[k][bench_blueprint[j]] == 'HIB':
-               print(bench_blueprint[j])
                normalized_arr[j] = v[j]/base_arr[j]
                delta_std[j] = stddev_lists[k][j]
                var_arr[j] = delta_std[j]/base_arr[j]
@@ -317,7 +315,6 @@ def print_results(benchmark, bench_results, stddev_results, bench_blueprint, dir
            result_lists.pop(target)
            stddev_lists.pop(target)
            break
-    print(result_lists.keys())
     base_arr = np.array(baseline_results)
     header = "Benchmarks"
     trailer = "{}{}/".format(source_file_path, benchmark)
@@ -423,15 +420,6 @@ def generate_latex_bandwidth_table_header(table_file, config_opts):
    table_file.write(measurement_column+"\n")
    table_file.write("\\hline"+"\n")
  
-def generate_latex_bandwidth_table_header_two():
-   # Create main latex table header
-   print("\\begin{tabular}{l|r|rr|rr|rr}")
-   print("\\multirow{3}{*}{\\textbf{Benchmark}} &\\multicolumn{1}{c|}{\\textbf{Baseline}}& \\multicolumn{4}{c|}{\\textbf{SafeFetch}} &\\multicolumn{2}{c}{\\textbf{Midas}}\\\\")
-   print("&\\multicolumn{1}{c|}{\\textbf{(GB/s)}}&\\multicolumn{4}{c|}{\\textbf{(\\%)}}&\\multicolumn{2}{c}{\\textbf{(\\%)}}\\\\")
-   print("&&\\multicolumn{2}{c}{\\textbf{default}}&\\multicolumn{2}{c|}{\\textbf{whitelist}}&&\\\\")
-   print("&&\\multicolumn{1}{c}{\\textbf{ovr.}}&\\multicolumn{1}{c|}{\\textbf{var.}}&\\multicolumn{1}{c}{\\textbf{ovr.}}&\\multicolumn{1}{c|}{\\textbf{var.}}&\\multicolumn{1}{c}{\\textbf{ovr.}}&\\multicolumn{1}{c}{\\textbf{var.}}\\\\")
-   print("\\hline")
-
  
 def generate_latex_performance_table(benchmark, bench_results, stddev_results, bench_blueprint, table_file):
     result_lists = {}
@@ -555,6 +543,10 @@ if __name__ == '__main__':
       for benchmark in benchmark_suites:
          benchmark_dir =  benchmark.replace("_bandwidth", "")
          bench_dirs = select_benchmark_dirs(source_file_path+benchmark_dir, is_paper)
+         if (bench_dirs == None):
+            print("Run artifact to get local results for {}".format(benchmark))
+            continue
+            
          if (benchmark != "phoronix"):
              direction = None
              plot_column = target_result_column
@@ -563,8 +555,8 @@ if __name__ == '__main__':
              plot_column = "avg_rounded"
          bench_results = aggregate_numeric_results(bench_dirs, plot_column)
          stddev_results = aggregate_numeric_results(bench_dirs, "stddev")
-         if enable_debug:
-            print("Ordered results {}".format(bench_results.keys()))
+         #if enable_debug:
+         #   print("Ordered results {}".format(bench_results.keys()))
          if (benchmark == "lmbench"):
              with open("../tables/lmbench_performance_{}.tex".format(is_paper), "w") as table_file:
                generate_latex_performance_table(benchmark, bench_results, stddev_results, blueprints[benchmark], table_file)
@@ -574,55 +566,3 @@ if __name__ == '__main__':
          else:
              plot_normalized_barchart(benchmark, bench_results, stddev_results, blueprints[benchmark], direction, "../figs/{}_performance_{}.pdf".format(benchmark, is_paper))
          
-        
-     '''
-     bench_filter="" 
-
-     if "BENCH_FILTER" in os.environ:
-         bench_filter = os.getenv("BENCH_FILTER")
-
-         if (bench_filter == "bandwidth_2"):
-            benchmark = "lmbench"
-            bench_dirs = select_benchmark_dirs(source_file_path+"lmbench")
-            bench_results = aggregate_results(bench_dirs)
-            stddev_results = aggregate_stddev(bench_dirs)
-            generate_latex_bandwidth_table_two(benchmark, bench_results, stddev_results, bandwidth_blueprints)
-
-         if (bench_filter == "bandwidth"):
-            print("Doing bandwidth measures")
-            benchmark_dir = "lmbench"
-            benchmark = "lmbench"
-            bench_dirs = select_benchmark_dirs(source_file_path+"lmbench")
-            bench_results = aggregate_bandwidth_results(bench_dirs, target_result_column)
-            stddev_results = aggregate_bandwidth_results(bench_dirs, "stddev")
-            print(bench_results)
-            generate_latex_lmbench_bandwidth_table(benchmark, bench_results, stddev_results, bandwidth_blueprints, ignore, strides)
-            print("Doing bandwidth measures")
-     
-
-      if bench_filter != "":
-         if benchmark not in bench_filter:
-           continue 
-      print("Processing {}...".format(benchmark))
-      benchmark_dir =  benchmark.replace("_bandwidth", "")
-      bench_dirs = select_benchmark_dirs(source_file_path+benchmark_dir)
-      bench_results = aggregate_results(bench_dirs)
-      stddev_results = aggregate_stddev(bench_dirs)
-      print(stddev_results)
-      #plot_results(benchmark, bench_results, blueprints[benchmark])
-      if (benchmark != "phoronix"):
-             direction = None
-      else:
-             direction = aggregate_column(bench_dirs, "info")
-      print_results(benchmark, bench_results, stddev_results, blueprints[benchmark], direction)
-
-      if (benchmark == "lmbench"):
-         generate_latex_main_performance_table_four(benchmark, bench_results, stddev_results, blueprints[benchmark])
-      if (benchmark == "osbench"):
-         plot_results_normalized_barchart_speedup(benchmark, bench_results, stddev_results, blueprints[benchmark], None)
-      if (benchmark == "phoronix"):
-         plot_results_normalized_barchart_speedup(benchmark, bench_results, stddev_results, blueprints[benchmark], aggregate_column(bench_dirs, "info"))
-
-
-     exit()
-     '''

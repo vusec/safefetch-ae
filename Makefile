@@ -7,6 +7,7 @@ MIDAS_DIR=midas
 SAVED_DIR?=dummy
 KERNEL_NAME=$(shell ./get_version.sh ${SAVED_DIR})
 KERNEL_VERSION=$(shell ./get_version.sh $(shell uname -r))
+all: version
 
 setup:
 	./setup.sh
@@ -93,7 +94,10 @@ all_default_midas: def_midas_config midas_config compile_midas
 
 # Loading the kernel onto the machine
 version:
-	@echo $(KERNEL_VERSION)
+	@echo "Artifact for paper SafeFetch"
+	@echo You ar running the artifact on machine:[$(KERNEL_VERSION)]
+	@echo If the output of the previous line contains [no-version] 
+	@echo you are not running a kernel that comes with this artifact
 
 clean_kernels:
 	./save_kernel.sh -silent-clean safefetch
