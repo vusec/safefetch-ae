@@ -9,6 +9,7 @@ matplotlib.rcParams['pdf.fonttype'] = 42
 matplotlib.rcParams['ps.fonttype'] = 42
 
 source_file_path = "../../performance/"
+security_file_path = "../../security/"
 benchmark_suites = ["lmbench", "lmbench_bandwidth", "osbench", "phoronix"]
 #benchmark_suites = ["lmbench", "osbench"]
 result_file = "results.csv"
@@ -22,7 +23,8 @@ enable_debug = True
 
 output_configs = [1, 0]
 
-config_patterns = [ "baseline", "safefetch", "whitelist", "midas"]
+config_patterns = [ "baseline", "safefetch", "whitelist", "midas" ]
+security_patterns = ["baseline", "safefetch"]
 
 
 lmbench_blueprint = [
@@ -158,28 +160,6 @@ def find_all_valid_benchmark_result_dirs(root_path):
     benchmark_result_dirs.sort()
     return benchmark_result_dirs
 
-
-def sanitize_user_input(inp, possible_vals):
-    selected_vals = []
-    if inp == "":
-        return selected_vals
-
-    split_inp = inp.split(",")
-    for i in split_inp:
-        if not i.strip().isdigit():
-            print("Invalid input: {}, ignoring!".format(i))
-            continue
-        i_int = int(i)
-        if i_int < 0 or i_int >= len(possible_vals):
-            print("Invalid value: {}, ignoring!".format(i))
-            continue
-        if i_int in selected_vals:
-            print("Duplicate value: {}, ignoring!".format(i))
-            continue
-        selected_vals += [i_int]
-    return selected_vals
-
-
 def select_benchmark_dirs(path, is_paper):
     bench_dirs = find_all_valid_benchmark_result_dirs(path)
 
@@ -202,6 +182,30 @@ def select_benchmark_dirs(path, is_paper):
     print("Selected the following configs:{}".format(final_bench_dirs))
     
     return final_bench_dirs
+
+def select_security_dirs(path, file):
+    bench_dirs = find_all_valid_benchmark_result_dirs(path)
+    final_bench_dirs = []
+
+    for i in range(len(bench_dirs)):
+        if  bench_dirs[i].endswith(file):
+                final_bench_dirs.append(bench_dirs[i])
+
+    if (len(final_bench_dirs) != 1):
+        return None
+
+    print("Selected the following configs:{}".format(final_bench_dirs))
+    
+    return final_bench_dirs
+
+def aggregate_numeric_security_results(bench_dirs, target_column):
+    bench_results = []
+    for b in bench_dirs:
+        with open(b+"/"+result_file) as csv_file:
+            csv_dict = csv.DictReader(filter(lambda row: row[0]!='#', csv_file), delimiter=';')
+            for row in csv_dict:
+                bench_results.append(int(row[target_column]))
+    return bench_results
 
 
 def aggregate_numeric_results(bench_dirs, target_column):
@@ -419,6 +423,16 @@ def generate_latex_bandwidth_table_header(table_file, config_opts):
    table_file.write(unit_column+"\n")
    table_file.write(measurement_column+"\n")
    table_file.write("\\hline"+"\n")
+
+def generate_latex_security_table_prologue(table_file):
+    table_header = "\\begin{tabular}{c|r}"
+    number_column = "Run & Reproductions" + "\\\\"
+    table_file.write(table_header)
+    table_file.write(number_column)
+
+def generate_latex_security_table_epilogue(table_file):
+    table_file.write("\\hline\n") 
+    table_file.write("\\end{tabular}\n")     
  
  
 def generate_latex_performance_table(benchmark, bench_results, stddev_results, bench_blueprint, table_file):
@@ -535,7 +549,16 @@ def generate_latex_bandwidth_table(benchmark, bench_results, stddev_results, ben
     table_file.write("\\hline\n") 
     table_file.write("\\end{tabular}\n")   
 
-
+def generate_latex_security_table(security_results, table_file):
+    i = 1
+    for result in security_results:
+        line = "{} & {}".format(i, result)
+        table_file.write("{}\\\\\n".format(line))
+        i = i + 1
+    avg_arr = np.array(security_results)
+    avg_val = np.average(avg_arr)
+    line = "Average & {}".format(round(avg_val, 2))
+    table_file.write("{}\\\\\n".format(line))
 
 
 if __name__ == '__main__':
@@ -566,3 +589,11 @@ if __name__ == '__main__':
          else:
              plot_normalized_barchart(benchmark, bench_results, stddev_results, blueprints[benchmark], direction, "../figs/{}_performance_{}.pdf".format(benchmark, is_paper))
          
+     for configuration in ["baseline", "safefetch"]:
+        with open("../tables/security_{}.tex".format(configuration), "w") as table_file:
+            generate_latex_security_table_prologue(table_file)
+            file_dir = select_security_dirs(security_file_path, configuration)  
+            if (file_dir != None):
+                security_results = aggregate_numeric_security_results(file_dir, "reproductions")
+                generate_latex_security_table(security_results, table_file)
+            generate_latex_security_table_epilogue(table_file)

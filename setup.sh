@@ -123,6 +123,16 @@ install_all () {
      echo '### Install pdflatex'
      sudo apt-get install texlive-latex-base texlive-fonts-extra texlive-fonts-recommended texlive-bibtex-extra biber
 
+     cd tmp || exit
+     git clone git@github.com:wpengfei/CVE-2016-6516-exploit.git
+     cp -r './CVE-2016-6516-exploit/Scott Bauer' ./exploit_cve_2016_6516
+     mv ./exploit_cve_2016_6516 ../exploit_cve_2016_6516
+     rm -rf ./CVE-2016-6516-exploit
+     
+     echo "### CVE-2016-6516 exploit installed!"
+
+     rm -rf tmp
+
      echo "### Installation complete!"
 
      echo 0
