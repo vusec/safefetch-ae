@@ -90,7 +90,7 @@ run_safefetch_configs () {
      ./safefetch_control.sh $kernel_config
 
      # Now execute the benchmarks
-     make $benchmark_config BUILD_STRING=$benchmark_name
+     make $benchmark_config BUILD_STRING=$1
 
      # Disable the defense and sleep for a bit.
 
@@ -109,7 +109,7 @@ if [[ $1 == 'safefetch' ]]; then
    run_baseline_and_safefetch_configs
 elif [[ $1 == 'whitelist' ]];
 then
-   run_safefetch_configs
+   run_safefetch_configs $1
 elif [[ $1 == 'midas' ]];
 then
    make $benchmark_config BUILD_STRING=$1
