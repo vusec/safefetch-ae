@@ -46,7 +46,7 @@ result: phoronix_result
 paper: 
 	cd ./playground/paper/scripts &&  python3 ./generate_plots.py && cd .. && make all && cd ../..
 
-all-paper: result paper
+all-paper: basic_test result paper
 
 # Kernel compilation
 def_safefetch_config:
@@ -125,6 +125,10 @@ run_security_artifact:
 clean_artifact: clean_kernels
 	@echo Cleaning installed kernels and reverting to default machine kernel
 	./clean_artifact.sh
+
+
+basic_test:
+	./basic_test.sh
 
 
 #.PHONY: paper 

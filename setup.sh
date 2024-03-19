@@ -14,7 +14,7 @@ install_all () {
      echo "### Prepping installation..."
      mkdir -p tmp
      mkdir -p benchmarks
-     sudo apt-get install libntirpc-dev flex bison libelf-dev libssl-dev bc build-essential libncurses-dev
+     sudo apt-get install libntirpc-dev flex bison libelf-dev libssl-dev bc build-essential libncurses-dev coreutils
 
      #echo "### Cloning SafeFetch kernel..."
      #git clone git@github.com:vusec/safefetch.git safefetch
@@ -118,6 +118,8 @@ install_all () {
      echo '### Finished installing paper-results'
 
      echo "### Installing result aggregation and representation dependencies..."
+     # jpeg necessary for matplotlib
+     sudo apt install libjpeg-dev zlib1g-dev 
      pip3 install numpy matplotlib
 
      echo '### Install pdflatex'
