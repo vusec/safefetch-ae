@@ -20,3 +20,4 @@
 [ ! -d ~/.phoronix-test-suite/test-results/safefetch-paper ] && exit 4
 [ ! -d ~/.phoronix-test-suite/test-results/midas-paper ] && exit 4
 
+exit 0
