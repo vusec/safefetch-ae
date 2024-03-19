@@ -19,7 +19,7 @@ target_result_column = "med"
 
 baseline_pattern = "baseline"
 
-enable_debug = False
+enable_debug = True
 
 output_configs = [1, 0]
 
@@ -379,9 +379,19 @@ def print_results(benchmark, bench_results, stddev_results, bench_blueprint, dir
         print(line)
         i = i + 1
     line = "{:40}".format("Geo mean.")
+
+    
+    is_inverse = False
+    # Use inverse ratio for phoronix/osbench overhead computations
+    if (benchmark == 'phoronix' or benchmark == 'osbench'):
+        geo_means = geo_means_inv
+        is_inverse = True
     for target in result_lists.keys():
-        line = "{} {:10}%".format(line, round(((geo_means[target] - 1.0) * 100.0), 1))
-        line = "{} {:10}%".format(line, round(((geo_means_inv[target] - 1.0) * 100.0), 1))
+        if not is_inverse:
+          line = "{} {:10}%".format(line, round(((geo_means[target] - 1.0) * 100.0), 1))
+        else:
+          line = "{} {:10}%".format(line, round(((1.0 - geo_means[target]) * 100.0), 1))
+        line = "{} {:10}-".format(line, '')
     print(line) 
 
 config_values = ["SafeFetch-Default", "SafeFetch-Whitelist", "Midas"]
