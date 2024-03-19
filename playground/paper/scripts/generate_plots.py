@@ -19,7 +19,7 @@ target_result_column = "med"
 
 baseline_pattern = "baseline"
 
-enable_debug = True
+enable_debug = False
 
 output_configs = [1, 0]
 
@@ -133,6 +133,7 @@ labels = {
     },
 }
 
+colors = { "safefetch" : "tab:blue", "midas" : "tab:green", "whitelist" : "tab:orange"}
 
 def get_simplified_xaxis_names(benchmark, benchmark_blueprint):
     simplified_xaxis = []
@@ -147,6 +148,12 @@ def search_keywords(benchmark, keywords):
         if keyword in labels[benchmark]["legend-keywords"]:
            return labels[benchmark]["legend-keywords"][keyword]
     return "notfound"
+
+def search_color(keywords):
+    for keyword in reversed(keywords):
+        if keyword in colors.keys():
+           return colors[keyword]
+    return "black"   
 
 
 def find_all_valid_benchmark_result_dirs(root_path):
@@ -223,6 +230,16 @@ def aggregate_numeric_results(bench_dirs, target_column):
             bench_results[b] = result_dict
     return bench_results
 
+
+# Sometimes Midas performance eval fails during Apache, if we don't have apache results
+# default them to 0 and output a warning.
+def verify_bench_results(bench_results, bench_blueprint, default_error):
+    for b in bench_results.keys():
+        for bench in bench_blueprint:
+          if bench not in bench_results[b].keys():
+            print("Warning- missing results for {} benchmark for {} config".format(bench, b))
+            bench_results[b][bench] = default_error
+
 def aggregate_column(bench_dirs, target_column):
     bench_results = {}
     for b in bench_dirs:
@@ -274,10 +291,10 @@ def plot_normalized_barchart(bechnmark, bench_results, stddev_results, bench_blu
                normalized_arr[j] = v[j]/base_arr[j]
                delta_std[j] = stddev_lists[k][j]
                var_arr[j] = delta_std[j]/base_arr[j]
-
-        label = search_keywords(benchmark , k.split("/")[-1].split("-"))
+        keywords = k.split("/")[-1].split("-")
+        label = search_keywords(benchmark , keywords)
         x = np.arange(len(bench_blueprint)) * 1.6
-        bar_arr += [ax.bar(x+(-0.4 + i*0.4), normalized_arr, 0.4, label=label, edgecolor = "black")]
+        bar_arr += [ax.bar(x+(-0.4 + i*0.4), normalized_arr, 0.4, label=label, edgecolor = "black", color = search_color(keywords))]
         ax.errorbar(x+(-0.4 + i*0.4), normalized_arr, yerr=var_arr,  linestyle='None', color='k', markersize=4, capsize=2,  elinewidth=0.5)
 
         for j in range(len(bench_blueprint)):
@@ -579,11 +596,17 @@ if __name__ == '__main__':
              plot_column = target_result_column
          else:
              direction = aggregate_column(bench_dirs, "info")
+             verify_bench_results(direction, blueprints[benchmark], 'HIB')
              plot_column = "avg_rounded"
          bench_results = aggregate_numeric_results(bench_dirs, plot_column)
          stddev_results = aggregate_numeric_results(bench_dirs, "stddev")
+
+         verify_bench_results(bench_results, blueprints[benchmark], 0.0)
+         verify_bench_results(stddev_results, blueprints[benchmark], 0.0)
+
          if enable_debug:
             print_results(benchmark, bench_results, stddev_results, blueprints[benchmark], direction)
+
          if (benchmark == "lmbench"):
              with open("../tables/lmbench_performance_{}.tex".format(is_paper), "w") as table_file:
                generate_latex_performance_table(benchmark, bench_results, stddev_results, blueprints[benchmark], table_file)
