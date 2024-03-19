@@ -4,7 +4,7 @@
 [ ! -f ./exploit_cve_2016_6516/doublefetch.c ] && exit 1
 
 # Check whether we have configured lmbench
-[ ! -f ./benchmarks/lmbench3/bin/x86_64-linux-gnu/CONFIG.${hostname} ] && exit 2
+[ ! -f ./benchmarks/lmbench3/bin/x86_64-linux-gnu/CONFIG.$(hostname) ] && exit 2
 
 # Check whether we have all osbench binaries
 [ ! -f ./benchmarks/osbench/out/create_files] && exit 3
