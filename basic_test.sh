@@ -7,11 +7,11 @@
 [ ! -f ./benchmarks/lmbench3/bin/x86_64-linux-gnu/CONFIG.$(hostname) ] && exit 2
 
 # Check whether we have all osbench binaries
-[ ! -f ./benchmarks/osbench/out/create_files] && exit 3
-[ ! -f ./benchmarks/osbench/out/create_processes] && exit 3
-[ ! -f ./benchmarks/osbench/out/create_threads] && exit 3
-[ ! -f ./benchmarks/osbench/out/launch_programs] && exit 3
-[ ! -f ./benchmarks/osbench/out/mem_alloc] && exit 3
+[ ! -f ./benchmarks/osbench/out/create_files ] && exit 3
+[ ! -f ./benchmarks/osbench/out/create_processes ] && exit 3
+[ ! -f ./benchmarks/osbench/out/create_threads ] && exit 3
+[ ! -f ./benchmarks/osbench/out/launch_programs ] && exit 3
+[ ! -f ./benchmarks/osbench/out/mem_alloc ] && exit 3
 
 # Check wheather we have installed phoronix workspace
 [ ! -d ~/.phoronix-test-suite/ ] && exit 4
