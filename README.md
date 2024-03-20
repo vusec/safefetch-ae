@@ -126,7 +126,7 @@ index 0 in the list).
 
   ### Notes on global configuration
 
-  The [global_export.sh](global_export.sh) is imported by most of our other scripts and sets a couple of global configurable
+  The [global_exports.sh](global_exports.sh) is imported by most of our other scripts and sets a couple of global configurable
   parameters (e.g., the SafeFetch and Midas public repos used to compile the kernels)
 
   Moreover, it can be used to set the number of benchmarking iterations during each of our artifact workflows as follows:
