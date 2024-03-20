@@ -124,4 +124,14 @@ index 0 in the list).
    ```
 
 
+  ### Notes on global configuration
 
+  The [global_export.sh](global_export.sh) is imported by most of our other scripts and sets a couple of global configurable
+  parameters (e.g., the SafeFetch and Midas public repos used to compile the kernels)
+
+  Moreover, it can be used to set the number of benchmarking iterations during each of our artifact workflows as follows:
+  - **RUNS** variable: sets the number of benchmarking iterations for LMBench and OSBench benchmarks
+  - **FORCE_TIMES_TO_RUN** variable: sets the number of benchmarking iterations for running Phoronix benchmarks
+  - **SECURITY_RUNS** variable: sets the number of iterations for running the security artifact.
+
+  If evaluators want to execute more/less runs of each artifact workflow the must simply modify these variable as they chose.
