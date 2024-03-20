@@ -127,8 +127,8 @@ clean_artifact: clean_kernels
 	./clean_artifact.sh
 
 
-basic_test:
-	./basic_test.sh
+verify_install:
+	./basic_install_test.sh
 
 
 #.PHONY: paper 

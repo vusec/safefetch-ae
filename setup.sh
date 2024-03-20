@@ -68,7 +68,7 @@ install_all () {
      echo "### Installing OSBench...";
      cd ./benchmarks || exit
      # dependencies
-     sudo apt-get install meson
+     sudo apt-get install meson ninja-build
      # benchmark
      git clone https://github.com/mbitsnbites/osbench.git;
 
