@@ -36,9 +36,6 @@ make load_kernel SAVED_DIR=name
 ```
 Where name can be either: exploit-default, safefetch-default or any kernel directory that exists in **playground/kernels**. 
 
-The **make load_kernel** command uses the [save_kernel.sh](save_kernel.sh) script under the hood to move kernels from **playground/kernels** to **/boot** from where **update-grub2** will add them to the boot process.
-Additionally the script is used to clean out kernels from the **/boot** directory or to create a kernel entry in **playground/kernels** after compiling a new kernel.
-
 When **make load_kernel** executes it will prompt the user to select which kernel to load by default as shown in the following example:
 
 ```bat
@@ -58,6 +55,14 @@ Select kernel number:
 ```
 If for example the user wants to load into the **safefetch** he must press 0 in this case (as safefetch non-recovery is
 index 0 in the list).
+
+  ### Adapting the load process to non-GRUB distros
+
+  The **make load_kernel** command uses the [save_kernel.sh](save_kernel.sh) script under the hood to move kernels from **playground/kernels** to **/boot** from where **update-grub2** will add them to the boot process.
+
+  Additionally the script is used to clean up kernels from the **/boot** directory or to create a kernel entry in **playground/kernels** after compiling a new kernel.
+
+  It should be easy to adapt our scripts to run on non-Grub systems. Check the **save_kernel.sh** and **configure_grub.sh** in case you need to tailor the artifact for a different bootloader.
 
   ### What happens if a precompiled kernel does not boot?
 
@@ -82,6 +87,7 @@ index 0 in the list).
    ```bat
    ./create_artifact_kernels.sh
    ```
+   Note that local compilation expects the host machine to be equipped with a gcc compiler (ideally v8.4 or newer) and binutils.
 
    ### Loading back in your default host kernel after you are done with the artifact
 
