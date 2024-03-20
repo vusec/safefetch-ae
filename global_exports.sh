@@ -8,3 +8,5 @@ export KERNEL_DIR=safefetch
 [ -z "$RUNS" ] && export RUNS=11
 export FORCE_TIMES_TO_RUN=$RUNS
 export SECURITY_RUNS=5
+export SAFEFETCH_REPO=git@github.com:vusec/safefetch.git
+export MIDAS_REPO=https://github.com/HexHive/midas.git

@@ -2,8 +2,7 @@
 . global_exports.sh
 
 # Clone safefetch in case it doesn't exist
-[[ ! -d safefetch ]] &&  git clone git@github.com:vusec/safefetch.git
-
+[[ ! -d safefetch ]] &&  git clone ${SAFEFETCH_REPO}
 [[ ! -d playground/kernels/safefetch-default ]] && ./save_kernel.sh -clean safefetch
 
 [[ ! -d playground/kernels/safefetch-default ]] && cd safefetch && git checkout main && cd .. && make all_default_safefetch  && ./save_kernel.sh -save safefetch safefetch-default && echo '##Compiled safefetch (default config)'
@@ -45,7 +44,7 @@ fi
 
 if [[ "$*" == *"-midas"* ]]
 then
-     [[ ! -d midas ]] &&  git clone https://github.com/HexHive/midas.git
+     [[ ! -d midas ]] &&  git clone ${MIDAS_REPO}
 
      [[ ! -d playground/kernels/midas-default ]] && ./save_kernel.sh -clean midas
 
