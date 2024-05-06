@@ -1,5 +1,9 @@
 SafeFetch artifact evaluation repository for Usenix'24.
 
+The source code for the **SafeFetch** kernel can be found [here](https://github.com/vusec/safefetch).
+
+From the aforementioned repo you can download the stable source code used to evaluate **SafeFetch's** [performance](https://github.com/vusec/safefetch/archive/refs/tags/v1.0.0.zip) and [security](https://github.com/vusec/safefetch/archive/refs/tags/v1.0.zip).
+
 ### Tips to navigate the repository
 
 The main directories in this repositories (and obtained while running the artifact workflow):
@@ -11,6 +15,82 @@ The main directories in this repositories (and obtained while running the artifa
  -  **playground/kernels**: contains a directory for each precompiled kernel coming with the artifact (i.e., exploit-default, safefetch-default, midas-default and whitelist-default).
  
   The artifact workflow is executed by running rules from the top [Makefile](Makefile)
+
+  ### Tips on the directory structure of the results after running the artifact 
+
+  After running **E1** you should have:
+  - in the **playground/security** you should have a `baseline` and `safefetch` dir each containing a **results.csv** file
+  which is used to generate the Security evaluation tables in the outputed pdf.
+
+  After running **E2** you should have:
+  - in `~/.phoronix-test-suite/test-results` you have `baseline` and `safefetch` directories (this is where Phoronix must save the results when the artifact is ran)
+  - in `playgrond\performance\lmbench`, `playgrond\performance\osbench` and `playgrond\performance\phoronix` directories you have a `baseline` and a `safefetch` sub-directory. For each of these sub-directories there should be a **results.csv** file inside.
+
+   After running **E3** you should have:
+  - in `~/.phoronix-test-suite/test-results` you have a `midas` directory
+  - in `playgrond\performance\lmbench`, `playgrond\performance\osbench` and `playgrond\performance\phoronix` directories you have a `midas` sub-directory. This sub-dir should contain a **results.csv** file inside. 
+
+  The '.csv' files are generated when running the `make all-paper` command or `make result` sub-command (which generates CSV files out of raw results) after each artifact workflow (i.e., E1, E2 and E3).
+
+  ### Prerequisites
+
+  #### Running the setup script
+
+  Our **Phoronix** evaluation pipeline expects a specific directory structure for the outputed evaluation file (i.e., they must
+  be outputed in the **~/.phoronix-test-suite** hidden sub-directory). 
+  This requires that, when setting up the artifact, the `make setup` command must be run using a normal user (the `whoami` command
+  should not print `root`). 
+  If the setup is ran as root user or with root priviledges (i.e., using `sudo`) Phoronix will be configured to use a different base directory than **~/.phoronix-test-suite** (i.e., **/var/lib/phoronix-test-suite** base dir) which will conflict with our result preprocessing scripts.
+
+  The normal user must however have root priviledges (i.e., must be in sudoers) but whenever the artifact requires root priviledges our scripts are configured to use the `sudo` command. So never manually append `sudo` when running the 
+  artifact as our scripts already do this when necessary. 
+
+  #### Hardware dependencies
+
+  The precompiled kernel images used to reproduce the main results in the paper
+  should be loaded on a real machine for accurate performance tests.
+  The host machine requires around 40 GiB free disk space, and at least 8GiB
+  of memory.
+  Our **SafeFetch** prototype supports machines with 64-bit x86 processors, and the 
+  results in the paper were obtained on a Intel i7-6700 machine (using 32 GiB of RAM).
+  An SSD is prefered for storage as it leads to faster compilation should you need
+  to re-compile the workflow kernels.
+  Moreover, for filesystem benchmarks (e.g., ran during LMBench bandwidth tests) 
+  an SSD assures that the storage speed does not become the bottleneck for the
+  experiments.
+
+  #### Software dependencies
+
+  Running the SafeFetch images requires a guest operating system which supports 
+  GRUB 2.0 (or newer), as the artifact scripts use GRUB utilities to load
+  the precompiled kernels (that have the **-default** suffix) on the host machine 
+  (check whether the **grub-mkconfig** and **update-grub2** are available on the machine).
+  The images were tested on a machine running **Ubuntu 22.04** with 
+  a host Linux kernel version **5.15.0-100-generic**.
+  The precompiled kernels use the default **X86_64** Linux
+  build, **x86_64_defconfig**.
+   In some scenarios the kernels might not run on the host machine (e.g., the host 
+   machine is equipped with hardware which require drivers beyong the Linux 
+   default build).
+   In these cases, you must compile the kernels locally on the machine, using the 
+   host kernel local config.
+   The artifact provides scripts to automatically compile **SafeFetch** kernels on the host 
+   machine.
+   The kernels compiled locally on the machine (which are included in sub-dirs that have a **-local** suffix) will be included alongside default kernels (i.e., those with a **-default** sub-dir suffix) in the **playground/kernels** directory.
+   For local compilation, the host machine ideally runs gcc **v8.4** (or newer) 
+   and binutils **v2.30** (or newer).
+   The process of compiling kernels on the local machine is detailed in later sections of this artifact.
+
+   #### Resources needed to reproduce claims
+
+   The artifact reproduces 1 security related claim (E1) and 2 performance related claims (E2 and E3).
+   Check the artifact appendix for detailed information regarding claims.
+   The minimal resources needed to reproduce each claim are:
+   - E1: 1 human minutes + 40 compute minutes
+   - E2: 1 human minutes + 7 compute hours + 5GB of disk space
+   - E3: 1 human minutes + 3.5 compute hours + 5GB of disk space
+
+  #### Hardware dependencies
 
   ### SafeFetch and static keys
 
@@ -135,3 +215,6 @@ index 0 in the list).
   - **SECURITY_RUNS** variable: sets the number of iterations for running the security artifact.
 
   If evaluators want to execute more/less runs of each artifact workflow the must simply modify these variable as they chose.
+
+  When cloning the repos for **SafeFetch** and **Midas** the artifact may use github using SSH. To change this aspect, consider
+  modifying the **SAFEFETCH_REPO** and **MIDAS_REPO** environment variables from **global_exports.sh**.

@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+. global_exports.sh
 
 clean_all () {
     rm -rf tmp
@@ -17,7 +18,7 @@ install_all () {
      sudo apt-get install libntirpc-dev flex bison libelf-dev libssl-dev bc build-essential libncurses-dev coreutils
 
      echo "### Cloning SafeFetch kernel..."
-     git clone git@github.com:vusec/safefetch.git safefetch
+     git clone ${SAFEFETCH_REPO}
      echo "### Finished cloning Safefetch kernel..."
 
      # Install LMBench benchmarking suite
