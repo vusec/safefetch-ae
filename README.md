@@ -18,17 +18,17 @@ The main directories in this repositories (and obtained while running the artifa
 
   ### Tips on the directory structure of the results after running the artifact 
 
-  After running **E1** you should have:
+  After running **E1**:
   - in the **playground/security** you should have a `baseline` and `safefetch` dir each containing a **results.csv** file
   which is used to generate the Security evaluation tables in the outputed pdf.
 
-  After running **E2** you should have:
+  After running **E2**:
   - in `~/.phoronix-test-suite/test-results` you have `baseline` and `safefetch` directories (this is where Phoronix must save the results when the artifact is ran)
-  - in `playgrond\performance\lmbench`, `playgrond\performance\osbench` and `playgrond\performance\phoronix` directories you have a `baseline` and a `safefetch` sub-directory. For each of these sub-directories there should be a **results.csv** file inside.
+  - in `playgrond/performance/lmbench`, `playgrond/performance/osbench` and `playgrond/performance/phoronix` directories you have a `baseline` and a `safefetch` sub-directory. For each of these sub-directories there should be a **results.csv** file inside.
 
-   After running **E3** you should have:
+   After running **E3**:
   - in `~/.phoronix-test-suite/test-results` you have a `midas` directory
-  - in `playgrond\performance\lmbench`, `playgrond\performance\osbench` and `playgrond\performance\phoronix` directories you have a `midas` sub-directory. This sub-dir should contain a **results.csv** file inside. 
+  - in `playgrond/performance/lmbench`, `playgrond/performance/osbench` and `playgrond/performance/phoronix` directories you have a `midas` sub-directory. This sub-dir should contain a **results.csv** file inside. 
 
   The '.csv' files are generated when running the `make all-paper` command or `make result` sub-command (which generates CSV files out of raw results) after each artifact workflow (i.e., E1, E2 and E3).
 
@@ -36,7 +36,7 @@ The main directories in this repositories (and obtained while running the artifa
 
   #### Running the setup script
 
-  Our **Phoronix** evaluation pipeline expects a specific directory structure for the outputed evaluation file (i.e., they must
+  Our **Phoronix** evaluation pipeline expects a specific directory structure for the outputed evaluation file (i.e., results must
   be outputed in the **~/.phoronix-test-suite** hidden sub-directory). 
   This requires that, when setting up the artifact, the `make setup` command must be run using a normal user (the `whoami` command
   should not print `root`). 
@@ -53,6 +53,7 @@ The main directories in this repositories (and obtained while running the artifa
   of memory.
   Our **SafeFetch** prototype supports machines with 64-bit x86 processors, and the 
   results in the paper were obtained on a Intel i7-6700 machine (using 32 GiB of RAM).
+
   An SSD is prefered for storage as it leads to faster compilation should you need
   to re-compile the workflow kernels.
   Moreover, for filesystem benchmarks (e.g., ran during LMBench bandwidth tests) 
@@ -69,6 +70,7 @@ The main directories in this repositories (and obtained while running the artifa
   a host Linux kernel version **5.15.0-100-generic**.
   The precompiled kernels use the default **X86_64** Linux
   build, **x86_64_defconfig**.
+
    In some scenarios the kernels might not run on the host machine (e.g., the host 
    machine is equipped with hardware which require drivers beyong the Linux 
    default build).
@@ -216,5 +218,5 @@ index 0 in the list).
 
   If evaluators want to execute more/less runs of each artifact workflow the must simply modify these variable as they chose.
 
-  When cloning the repos for **SafeFetch** and **Midas** the artifact may use github using SSH. To change this aspect, consider
+  When cloning the repos for **SafeFetch** and **Midas** the artifact may use SSH during cloning. To change this aspect, consider
   modifying the **SAFEFETCH_REPO** and **MIDAS_REPO** environment variables from **global_exports.sh**.
