@@ -92,7 +92,6 @@ The main directories in this repositories (and obtained while running the artifa
    - E2: 1 human minutes + 7 compute hours + 5GB of disk space
    - E3: 1 human minutes + 3.5 compute hours + 5GB of disk space
 
-  #### Hardware dependencies
 
   ### SafeFetch and static keys
 
