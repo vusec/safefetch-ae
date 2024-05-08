@@ -1,6 +1,8 @@
-SafeFetch artifact evaluation repository for Usenix'24.
+SafeFetch artifact evaluation repository for USENIX Security '24 [Call for Artifacts](https://www.usenix.org/conference/usenixsecurity24/call-for-artifacts).
 
-The source code for the **SafeFetch** kernel can be found [here](https://github.com/vusec/safefetch).
+The source code for the **SafeFetch** kernel prototype can be found [here](https://github.com/vusec/safefetch).
+The prototype is based on the *SafeFetch: Practical Double-Fetch Protection with Kernel-Fetch Caching* [paper](https://download.vusec.net/papers/safefetch_sec24.pdf) accepted for publication at the *33rd Usenix Security Symposium*, 2024.
+
 
 From the aforementioned repo you can download the stable source code used to evaluate **SafeFetch's** [performance](https://github.com/vusec/safefetch/archive/refs/tags/v1.0.0.zip) and [security](https://github.com/vusec/safefetch/archive/refs/tags/v1.0.zip).
 
